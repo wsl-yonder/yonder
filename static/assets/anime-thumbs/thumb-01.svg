@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="爪码 Claw Code 动漫科技风封面">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#71d0f0"/>
+      <stop offset="1" stop-color="#f6ffff"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  
+      <rect width="640" height="360" fill="url(#sky)"/>
+      <circle cx="389" cy="70" r="34" fill="#b7ec77" opacity=".66" filter="url(#soft)"/>
+      
+      <g opacity=".9" transform="translate(197 75) scale(0.68)">
+        <ellipse cx="0" cy="18" rx="56" ry="18" fill="rgba(255,255,255,.86)"/>
+        <circle cx="-30" cy="12" r="20" fill="rgba(255,255,255,.86)"/>
+        <circle cx="4" cy="5" r="27" fill="rgba(255,255,255,.86)"/>
+        <circle cx="34" cy="13" r="18" fill="rgba(255,255,255,.86)"/>
+      </g>
+    
+      
+      <g opacity=".9" transform="translate(317 79) scale(0.52)">
+        <ellipse cx="0" cy="18" rx="56" ry="18" fill="rgba(255,255,255,.86)"/>
+        <circle cx="-30" cy="12" r="20" fill="rgba(255,255,255,.86)"/>
+        <circle cx="4" cy="5" r="27" fill="rgba(255,255,255,.86)"/>
+        <circle cx="34" cy="13" r="18" fill="rgba(255,255,255,.86)"/>
+      </g>
+    
+      <path d="M0 215 C88 158 170 190 250 134 C340 74 438 126 640 84 L640 360 L0 360Z" fill="#3e9070" opacity=".72"/>
+      <path d="M0 250 C110 190 186 238 298 178 C424 110 500 204 640 150 L640 360 L0 360Z" fill="#7ac579"/>
+      <path d="M0 304 C110 282 205 318 315 286 C442 250 542 300 640 270 L640 360 L0 360Z" fill="#3e9070"/>
+      
+      <g transform="translate(68 230) scale(0.92)">
+        <rect x="-4" y="18" width="8" height="34" rx="3" fill="#765840"/>
+        <circle cx="0" cy="7" r="24" fill="#3e9070"/>
+        <circle cx="-18" cy="17" r="18" fill="#7ac579"/>
+        <circle cx="18" cy="18" r="17" fill="#7ac579"/>
+      </g>
+    
+      
+      <g transform="translate(560 228) scale(0.8)">
+        <rect x="-4" y="18" width="8" height="34" rx="3" fill="#765840"/>
+        <circle cx="0" cy="7" r="24" fill="#3e9070"/>
+        <circle cx="-18" cy="17" r="18" fill="#7ac579"/>
+        <circle cx="18" cy="18" r="17" fill="#7ac579"/>
+      </g>
+    
+      <path d="M237 250 l54 -34 l54 34 v58 h-108z" fill="rgba(255,255,255,.68)"/>
+      <path d="M237 250 l54 -34 l54 34" fill="none" stroke="#b7ec77" stroke-width="9" stroke-linecap="round"/>
+    
+  
+          <rect x="158" y="92" width="326" height="172" rx="18" fill="rgba(14,38,48,.68)" stroke="rgba(255,255,255,.56)"/>
+          <circle cx="184" cy="116" r="7" fill="#ff7d7d"/><circle cx="206" cy="116" r="7" fill="#ffd87a"/><circle cx="228" cy="116" r="7" fill="#84e59f"/>
+          <path d="M198 172 l32 24 l-32 24" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="188" y="120" width="291" height="7" rx="4" fill="#b7ec77" opacity="0.72"/><rect x="188" y="142" width="328" height="7" rx="4" fill="#b7ec77" opacity="0.6599999999999999"/><rect x="188" y="164" width="145" height="7" rx="4" fill="#b7ec77" opacity="0.6"/><rect x="188" y="186" width="182" height="7" rx="4" fill="#b7ec77" opacity="0.54"/><rect x="188" y="208" width="219" height="7" rx="4" fill="#b7ec77" opacity="0.48"/>
+        
+  <g opacity=".66">
+    <path d="M34 54 C92 36 148 38 210 54" stroke="rgba(255,255,255,.72)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M460 48 C512 34 560 36 606 52" stroke="rgba(255,255,255,.66)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <rect x="22" y="22" width="72" height="34" rx="13" fill="rgba(22,85,94,.55)"/>
+  <text x="58" y="45" text-anchor="middle" font-size="18" font-weight="800" fill="#fff" font-family="Arial, sans-serif">#01</text>
+  <rect x="28" y="282" width="584" height="52" rx="18" fill="rgba(17,45,55,.55)"/>
+  <text x="52" y="306" font-size="22" font-weight="800" fill="#fff" font-family="Arial, sans-serif">爪码 Claw Code</text>
+  <text x="52" y="326" font-size="14" font-weight="700" fill="rgba(255,255,255,.82)" font-family="Arial, sans-serif">claw-code · Rust / AI Coding</text>
+</svg>

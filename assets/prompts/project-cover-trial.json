@@ -1,0 +1,26 @@
+[
+  {
+    "rank": 1,
+    "repo": "ultraworkers/claw-code",
+    "theme": "CLI / AI coding",
+    "prompt": "anime technology blog cover, green pastoral sky background, a glowing terminal window floating above a grassy hill, code lines turning into small light birds, subtle Rust orange accent, clean cinematic composition, 16:9, no text, no watermark"
+  },
+  {
+    "rank": 2,
+    "repo": "garrytan/gstack",
+    "theme": "agent workflow",
+    "prompt": "anime technology blog cover, green soft landscape with a glass planning board, multiple small luminous agent nodes connected like a team workflow, cozy studio atmosphere, blue and mint accents, 16:9, no text, no watermark"
+  },
+  {
+    "rank": 7,
+    "repo": "MemPalace/mempalace",
+    "theme": "AI memory",
+    "prompt": "anime technology blog cover, memory palace in a green valley, floating archive cards and constellation lines above old library towers, calm sunlight, elegant fantasy tech feeling, 16:9, no text, no watermark"
+  },
+  {
+    "rank": 9,
+    "repo": "safishamsi/graphify",
+    "theme": "knowledge graph",
+    "prompt": "anime technology blog cover, grassy hill under blue sky, luminous knowledge graph nodes connecting books code files database cubes and images, soft cyber botanical mood, teal and gold accents, 16:9, no text, no watermark"
+  }
+]

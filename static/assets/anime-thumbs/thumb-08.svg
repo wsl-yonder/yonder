@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="精准文本排版引擎 动漫科技风封面">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#99c6ff"/>
+      <stop offset="1" stop-color="#f9fbff"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  
+      <rect width="640" height="360" fill="url(#sky)"/>
+      <circle cx="509" cy="70" r="34" fill="#ffffff" opacity=".66" filter="url(#soft)"/>
+      
+      <g opacity=".9" transform="translate(217 73) scale(0.68)">
+        <ellipse cx="0" cy="18" rx="56" ry="18" fill="rgba(255,255,255,.86)"/>
+        <circle cx="-30" cy="12" r="20" fill="rgba(255,255,255,.86)"/>
+        <circle cx="4" cy="5" r="27" fill="rgba(255,255,255,.86)"/>
+        <circle cx="34" cy="13" r="18" fill="rgba(255,255,255,.86)"/>
+      </g>
+    
+      
+      <g opacity=".9" transform="translate(327 69) scale(0.52)">
+        <ellipse cx="0" cy="18" rx="56" ry="18" fill="rgba(255,255,255,.86)"/>
+        <circle cx="-30" cy="12" r="20" fill="rgba(255,255,255,.86)"/>
+        <circle cx="4" cy="5" r="27" fill="rgba(255,255,255,.86)"/>
+        <circle cx="34" cy="13" r="18" fill="rgba(255,255,255,.86)"/>
+      </g>
+    
+      <path d="M0 215 C88 158 170 190 250 134 C340 74 438 126 640 84 L640 360 L0 360Z" fill="#596db0" opacity=".72"/>
+      <path d="M0 250 C110 190 186 238 298 178 C424 110 500 204 640 150 L640 360 L0 360Z" fill="#9ecb76"/>
+      <path d="M0 304 C110 282 205 318 315 286 C442 250 542 300 640 270 L640 360 L0 360Z" fill="#596db0"/>
+      
+      <g transform="translate(68 230) scale(0.92)">
+        <rect x="-4" y="18" width="8" height="34" rx="3" fill="#765840"/>
+        <circle cx="0" cy="7" r="24" fill="#596db0"/>
+        <circle cx="-18" cy="17" r="18" fill="#9ecb76"/>
+        <circle cx="18" cy="18" r="17" fill="#9ecb76"/>
+      </g>
+    
+      
+      <g transform="translate(560 228) scale(0.8)">
+        <rect x="-4" y="18" width="8" height="34" rx="3" fill="#765840"/>
+        <circle cx="0" cy="7" r="24" fill="#596db0"/>
+        <circle cx="-18" cy="17" r="18" fill="#9ecb76"/>
+        <circle cx="18" cy="18" r="17" fill="#9ecb76"/>
+      </g>
+    
+      <path d="M337 250 l54 -34 l54 34 v58 h-108z" fill="rgba(255,255,255,.68)"/>
+      <path d="M337 250 l54 -34 l54 34" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/>
+    
+  <rect x='152' y='80' width='340' height='220' rx='24' fill='rgba(255,255,255,.62)'/><rect x="178" y="104" width="250" height="12" rx="6" fill="#ffffff" opacity=".82"/><rect x="178" y="132" width="300" height="12" rx="6" fill="#596db0" opacity=".82"/><rect x="178" y="160" width="350" height="12" rx="6" fill="#ffffff" opacity=".82"/><rect x="178" y="188" width="250" height="12" rx="6" fill="#596db0" opacity=".82"/><rect x="178" y="216" width="300" height="12" rx="6" fill="#ffffff" opacity=".82"/><rect x="178" y="244" width="350" height="12" rx="6" fill="#596db0" opacity=".82"/><path d='M218 254 C280 232 376 236 430 258' stroke='#fff' stroke-width='8' fill='none' stroke-linecap='round'/>
+  <g opacity=".66">
+    <path d="M34 54 C92 36 148 38 210 54" stroke="rgba(255,255,255,.72)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M460 48 C512 34 560 36 606 52" stroke="rgba(255,255,255,.66)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <rect x="22" y="22" width="72" height="34" rx="13" fill="rgba(22,85,94,.55)"/>
+  <text x="58" y="45" text-anchor="middle" font-size="18" font-weight="800" fill="#fff" font-family="Arial, sans-serif">#08</text>
+  <rect x="28" y="282" width="584" height="52" rx="18" fill="rgba(17,45,55,.55)"/>
+  <text x="52" y="306" font-size="22" font-weight="800" fill="#fff" font-family="Arial, sans-serif">精准文本排版引擎</text>
+  <text x="52" y="326" font-size="14" font-weight="700" fill="rgba(255,255,255,.82)" font-family="Arial, sans-serif">pretext · TypeScript / Text Layout</text>
+</svg>

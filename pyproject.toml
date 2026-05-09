@@ -1,0 +1,19 @@
+[project]
+name = "knowledge-radar"
+version = "0.1.0"
+description = "AI, finance, and tech digest assistant with WxPusher delivery."
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+knowledge-radar = "knowledge_radar.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

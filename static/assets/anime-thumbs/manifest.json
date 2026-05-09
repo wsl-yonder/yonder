@@ -1,0 +1,142 @@
+[
+  {
+    "file": "thumb-01.svg",
+    "project": "ultraworkers/claw-code",
+    "name": "爪码 Claw Code",
+    "category": "cli",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-02.svg",
+    "project": "garrytan/gstack",
+    "name": "Garry 的代理工作台",
+    "category": "agent",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-03.svg",
+    "project": "karpathy/autoresearch",
+    "name": "自动研究员",
+    "category": "research",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-04.svg",
+    "project": "VoltAgent/awesome-design-md",
+    "name": "设计规范宝库",
+    "category": "design",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-05.svg",
+    "project": "paperclipai/paperclip",
+    "name": "纸夹公司编排器",
+    "category": "agent",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-06.svg",
+    "project": "JuliusBrussee/caveman",
+    "name": "穴居人模式",
+    "category": "agent",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-07.svg",
+    "project": "MemPalace/mempalace",
+    "name": "记忆宫殿",
+    "category": "memory",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-08.svg",
+    "project": "chenglou/pretext",
+    "name": "精准文本排版引擎",
+    "category": "text",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-09.svg",
+    "project": "safishamsi/graphify",
+    "name": "代码知识图谱",
+    "category": "graph",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-10.svg",
+    "project": "santifer/career-ops",
+    "name": "职业作战系统",
+    "category": "dashboard",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-11.svg",
+    "project": "addyosmani/agent-skills",
+    "name": "代理技能库",
+    "category": "runtime",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-12.svg",
+    "project": "nexu-io/open-design",
+    "name": "开放设计工坊",
+    "category": "design",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-13.svg",
+    "project": "HKUDS/CLI-Anything",
+    "name": "万物命令行",
+    "category": "cli",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-14.svg",
+    "project": "zeroclaw-labs/zeroclaw",
+    "name": "零爪个人助手底座",
+    "category": "agent",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-15.svg",
+    "project": "Gitlawb/openclaude",
+    "name": "开放 Claude 客户端",
+    "category": "runtime",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-16.svg",
+    "project": "googleworkspace/cli",
+    "name": "Google Workspace 命令行",
+    "category": "cli",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-17.svg",
+    "project": "AlexsJones/llmfit",
+    "name": "本机模型适配器",
+    "category": "runtime",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-18.svg",
+    "project": "openai/symphony",
+    "name": "交响乐任务编排",
+    "category": "agent",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-19.svg",
+    "project": "NVIDIA/NemoClaw",
+    "name": "NVIDIA 安全开放爪",
+    "category": "security",
+    "source": "generated from GitHub project metadata"
+  },
+  {
+    "file": "thumb-20.svg",
+    "project": "NawfalMotii79/PLFM_RADAR",
+    "name": "低成本相控阵雷达",
+    "category": "radar",
+    "source": "generated from GitHub project metadata"
+  }
+]

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="低成本相控阵雷达 动漫科技风封面">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#2a3f78"/>
+      <stop offset="1" stop-color="#89a5db"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  
+      <rect width="640" height="360" fill="url(#sky)"/>
+      <circle cx="478" cy="70" r="34" fill="#ffd96e" opacity=".66" filter="url(#soft)"/>
+      
+      <g opacity=".9" transform="translate(146 68) scale(0.68)">
+        <ellipse cx="0" cy="18" rx="56" ry="18" fill="rgba(255,255,255,.86)"/>
+        <circle cx="-30" cy="12" r="20" fill="rgba(255,255,255,.86)"/>
+        <circle cx="4" cy="5" r="27" fill="rgba(255,255,255,.86)"/>
+        <circle cx="34" cy="13" r="18" fill="rgba(255,255,255,.86)"/>
+      </g>
+    
+      
+      <g opacity=".9" transform="translate(418 74) scale(0.52)">
+        <ellipse cx="0" cy="18" rx="56" ry="18" fill="rgba(255,255,255,.86)"/>
+        <circle cx="-30" cy="12" r="20" fill="rgba(255,255,255,.86)"/>
+        <circle cx="4" cy="5" r="27" fill="rgba(255,255,255,.86)"/>
+        <circle cx="34" cy="13" r="18" fill="rgba(255,255,255,.86)"/>
+      </g>
+    
+      <path d="M0 215 C88 158 170 190 250 134 C340 74 438 126 640 84 L640 360 L0 360Z" fill="#172449" opacity=".72"/>
+      <path d="M0 250 C110 190 186 238 298 178 C424 110 500 204 640 150 L640 360 L0 360Z" fill="#3f6e8a"/>
+      <path d="M0 304 C110 282 205 318 315 286 C442 250 542 300 640 270 L640 360 L0 360Z" fill="#172449"/>
+      
+      <g transform="translate(68 230) scale(0.92)">
+        <rect x="-4" y="18" width="8" height="34" rx="3" fill="#765840"/>
+        <circle cx="0" cy="7" r="24" fill="#172449"/>
+        <circle cx="-18" cy="17" r="18" fill="#3f6e8a"/>
+        <circle cx="18" cy="18" r="17" fill="#3f6e8a"/>
+      </g>
+    
+      
+      <g transform="translate(560 228) scale(0.8)">
+        <rect x="-4" y="18" width="8" height="34" rx="3" fill="#765840"/>
+        <circle cx="0" cy="7" r="24" fill="#172449"/>
+        <circle cx="-18" cy="17" r="18" fill="#3f6e8a"/>
+        <circle cx="18" cy="18" r="17" fill="#3f6e8a"/>
+      </g>
+    
+      <path d="M386 250 l54 -34 l54 34 v58 h-108z" fill="rgba(255,255,255,.68)"/>
+      <path d="M386 250 l54 -34 l54 34" fill="none" stroke="#ffd96e" stroke-width="9" stroke-linecap="round"/>
+    
+  <circle cx="320" cy="188" r="36" fill="none" stroke="rgba(255,255,255,0.78)" stroke-width="5"/><circle cx="320" cy="188" r="64" fill="none" stroke="rgba(255,255,255,0.67)" stroke-width="5"/><circle cx="320" cy="188" r="92" fill="none" stroke="rgba(255,255,255,0.56)" stroke-width="5"/><circle cx="320" cy="188" r="120" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="5"/><path d='M320 188 L446 128' stroke='#ffd96e' stroke-width='9' stroke-linecap='round'/><circle cx='320' cy='188' r='18' fill='#172449' stroke='#fff' stroke-width='5'/><path d='M180 286 h280' stroke='#ffd96e' stroke-width='7' stroke-linecap='round'/>
+  <g opacity=".66">
+    <path d="M34 54 C92 36 148 38 210 54" stroke="rgba(255,255,255,.72)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M460 48 C512 34 560 36 606 52" stroke="rgba(255,255,255,.66)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <rect x="22" y="22" width="72" height="34" rx="13" fill="rgba(22,85,94,.55)"/>
+  <text x="58" y="45" text-anchor="middle" font-size="18" font-weight="800" fill="#fff" font-family="Arial, sans-serif">#20</text>
+  <rect x="28" y="282" width="584" height="52" rx="18" fill="rgba(17,45,55,.55)"/>
+  <text x="52" y="306" font-size="22" font-weight="800" fill="#fff" font-family="Arial, sans-serif">低成本相控阵雷达</text>
+  <text x="52" y="326" font-size="14" font-weight="700" fill="rgba(255,255,255,.82)" font-family="Arial, sans-serif">PLFM_RADAR · PLSQL / Radar</text>
+</svg>

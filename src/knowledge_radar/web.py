@@ -813,12 +813,12 @@ def render_landing() -> str:
 
 def render_github_demo() -> str:
     project_cards = []
-    covers_dir = ROOT / "static" / "assets" / "generated-covers"
+    covers_dir = ROOT / "static" / "assets" / "github" / "covers"
     for project in GITHUB_PROJECTS:
         tech_summary = " · ".join(project["tech"][:2])
         jpg_cover = covers_dir / f"cover-{project['rank']:02d}.jpg"
         if jpg_cover.exists():
-            thumb_path = f"/static/assets/generated-covers/cover-{project['rank']:02d}.jpg"
+            thumb_path = f"/static/assets/github/covers/cover-{project['rank']:02d}.jpg"
         else:
             thumb_path = f"/static/assets/anime-thumbs/thumb-{project['rank']:02d}.svg"
         project_cards.append(
@@ -877,7 +877,7 @@ def render_github_demo() -> str:
       height: 21vh;
       max-height: 256px;
       overflow: hidden;
-      background: url("/static/assets/scene/cyber-banner.jpg") center 30% / cover no-repeat;
+      background: url("/static/assets/github/banner.jpg") center 30% / cover no-repeat;
       border-bottom: 1px solid #d5e7e8;
       color: #fff;
     }
@@ -1123,11 +1123,11 @@ def render_github_demo() -> str:
         <span>生活</span>
         <a href="#site-footer">小站</a>
       </div>
-      <div class="status">近 3 个月 · Top 20</div>
+      <div class="status">近 3 个月 · Top 32</div>
     </nav>
     <section class="banner-copy">
       <h1>GitHub 乐子雷达</h1>
-      <p>最近三个月创建、按星数排序的高星项目。适合快速扫一眼今天开源圈又在整什么活。</p>
+      <p>最近三个月创建、按星数排序的高星项目 Top 32。适合快速扫一眼今天开源圈又在整什么活。</p>
     </section>
   </header>
 

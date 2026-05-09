@@ -26,8 +26,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from knowledge_radar.github_demo import GITHUB_PROJECTS  # noqa: E402
 
-OUT_DIR = ROOT / "static" / "assets" / "generated-covers"
-POOL_DIR = ROOT / "static" / "assets" / "background-pool"
+OUT_DIR = ROOT / "static" / "assets" / "github" / "covers"
+POOL_DIR = ROOT / "static" / "assets" / "github" / "pool"
 MANIFEST_PATH = OUT_DIR / "manifest.json"
 WIDTH, HEIGHT = 960, 540
 

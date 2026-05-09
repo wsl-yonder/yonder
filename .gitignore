@@ -7,4 +7,4 @@ __pycache__/
 *.pyc
 .venv/
 tools/
-static/assets/background-pool/
+static/assets/github/pool/

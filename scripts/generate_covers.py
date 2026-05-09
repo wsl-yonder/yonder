@@ -55,6 +55,16 @@ PROJECT_KEYWORDS: dict[int, list[str]] = {
     18: ["symphony", "orchestra", "music", "harmony", "conductor", "theater"],
     19: ["shield", "fortress", "guardian", "protection", "citadel"],
     20: ["radar", "antenna", "detection", "signal", "waves", "satellite"],
+    21: ["blueprint", "engineering", "workshop", "craft", "precision", "tools"],
+    22: ["tiny robot", "cat companion", "cute", "miniature", "futuristic", "mecha"],
+    23: ["treasure chest", "collection", "compendium", "archive", "showcase", "gallery"],
+    24: ["tiny house", "minimalist", "compact", "efficient", "speed", "lightning"],
+    25: ["power armor", "mecha suit", "upgrade", "enhancement", "hologram", "interface"],
+    26: ["portal", "gateway", "hub", "nexus", "bridge", "dimension"],
+    27: ["all seeing eye", "vision", "telescope", "observer", "watcher", "omniscient"],
+    28: ["goddess", "creation", "sculpture", "essence", "transformation", "mystical"],
+    29: ["twin dragons", "bridge", "fusion", "collaboration", "harmony", "duality"],
+    30: ["blueprint tower", "architecture", "foundation", "structure", "construction", "pillar"],
 }
 
 

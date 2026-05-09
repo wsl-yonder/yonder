@@ -1410,13 +1410,20 @@ def render_ai_news() -> str:
       line-height: 1.6;
       display: none;
     }}
+    .poem {{
+      width: min(1320px, calc(100% - 44px));
+      margin: 44px auto 30px;
+      text-align: center;
+      color: #607680;
+      font-weight: 900;
+    }}
     .site-footer {{
       text-align: center;
       padding: 48px 24px 32px;
       font-size: 13px;
       color: #8da6ae;
       font-weight: 900;
-      background: url("/static/assets/scene/pastoral-4k.png") center bottom / cover no-repeat;
+      background: #e8f0f2;
     }}
     @media (max-width: 960px) {{
       .card-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
@@ -1463,10 +1470,7 @@ def render_ai_news() -> str:
     </section>
   </main>
 
-  <footer id="site-footer" class="site-footer">
-    <p>今日宜闻 · 信息雷达</p>
-    <p style="margin:4px 0 0;font-size:12px;opacity:.78">获取最新 AI · 科技 · 金融资讯，每日精选，安静阅读。</p>
-  </footer>
+  <footer id="site-footer" class="poem">大鹏一日同风起，扶摇直上九万里。</footer>
 </body>
 </html>"""
 

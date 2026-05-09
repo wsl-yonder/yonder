@@ -198,7 +198,7 @@ GITHUB_PROJECTS = [
         "tech": ["Elixir", "Codex Orchestration", "Autonomous Runs"],
         "summary": "OpenAI 开源的 Codex 编排项目，把工作拆成隔离的自主实现运行。",
         "detail": "它的重点是团队如何管理 AI 实现任务，而不是盯着每个代理输出。对未来软件项目管理方式很有代表性。",
-        "url": "https://openai.com/index/open-source-codex-orchestration-symphony/",
+        "url": "https://github.com/openai/symphony",
         "created_at": "2026-02-26",
     },
     {

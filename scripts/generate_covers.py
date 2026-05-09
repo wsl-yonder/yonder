@@ -183,37 +183,6 @@ def composite_cover(bg_path: Path, project: dict, output_path: Path) -> bool:
     img = img.resize((WIDTH, HEIGHT), Image.LANCZOS)
     draw = ImageDraw.Draw(img)
 
-    font_dir = ROOT / "static" / "assets" / "fonts"
-    title_font = _load_font(draw, font_dir, 26)
-    tech_font = _load_font(draw, font_dir, 15)
-    rank_font = _load_font(draw, font_dir, 20)
-
-    name = project["name"]
-    repo_name = project["repo"].split("/")[-1]
-    tech_str = " / ".join(project["tech"][:2])
-
-    # Text shadow helper — draws a dark outline behind white text for readability
-    def shadowed_text(xy, text, fill, font, shadow_color=(13, 38, 44)):
-        x, y = xy
-        for dx, dy in [(-1, -1), (1, -1), (-1, 1), (1, 1)]:
-            draw.text((x + dx, y + dy), text, fill=shadow_color, font=font)
-        draw.text((x, y), text, fill=fill, font=font)
-
-    shadowed_text((24, HEIGHT - 52), name, fill=(255, 255, 255, 240), font=title_font)
-    shadowed_text(
-        (24, HEIGHT - 24), f"{repo_name}  ·  {tech_str}",
-        fill=(255, 255, 255, 200), font=tech_font
-    )
-
-    # Top-left rank badge
-    badge_x, badge_y = 20, 20
-    ImageDraw.Draw(img).rounded_rectangle(
-        [(badge_x, badge_y), (badge_x + 72, badge_y + 34)],
-        radius=12, fill=(22, 85, 94, 200)
-    )
-    draw.text((badge_x + 36, badge_y + 13), f"#{project['rank']:02d}",
-              fill=(255, 255, 255), font=rank_font, anchor="ma")
-
     output_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(output_path, "JPEG", quality=92)
     return True

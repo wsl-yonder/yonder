@@ -815,7 +815,6 @@ def render_github_demo() -> str:
     project_cards = []
     covers_dir = ROOT / "static" / "assets" / "github" / "covers"
     for project in GITHUB_PROJECTS:
-        tech_summary = " · ".join(project["tech"][:2])
         jpg_cover = covers_dir / f"cover-{project['rank']:02d}.jpg"
         if jpg_cover.exists():
             thumb_path = f"/static/assets/github/covers/cover-{project['rank']:02d}.jpg"
@@ -826,10 +825,8 @@ def render_github_demo() -> str:
             <article id="project-{project['rank']}" class="bili-card">
               <a class="thumb" href="{_escape(project['url'])}" target="_blank" rel="noopener noreferrer" aria-label="打开 {_escape(project['name'])}">
                 <img src="{thumb_path}" alt="{_escape(project['name'])} 的二次元风格封面" loading="lazy">
-                <span class="rank">#{project['rank']:02d}</span>
-                <span class="tech-tag">{_escape(tech_summary)}</span>
               </a>
-              <h2><a href="{_escape(project['url'])}" target="_blank" rel="noopener noreferrer">{_escape(project['name'])}</a></h2>
+              <h2><a href="{_escape(project['url'])}" target="_blank" rel="noopener noreferrer"><span class="rank-num">{project['rank']}</span> {_escape(project['name'])}</a></h2>
               <p class="summary">{_escape(project['summary'])}</p>
               <div class="card-meta">
                 <span>上架 {_escape(project.get('created_at', '时间未知'))}</span>
@@ -937,7 +934,7 @@ def render_github_demo() -> str:
     }
     .banner-copy p {
       margin: 10px 0 0;
-      max-width: 660px;
+      max-width: 900px;
       font-weight: 900;
       line-height: 1.55;
     }
@@ -1050,6 +1047,20 @@ def render_github_demo() -> str:
       text-decoration: none;
     }
     .bili-card h2 a:hover { color: var(--cyan); }
+    .rank-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #316473;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
     .summary {
       display: -webkit-box;
       min-height: 44px;

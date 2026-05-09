@@ -8,3 +8,4 @@ __pycache__/
 .venv/
 tools/
 static/assets/github/pool/
+static/assets/ai/pool/

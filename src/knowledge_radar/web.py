@@ -103,6 +103,7 @@ def render_dashboard(settings, channel: str, query: str) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>InsightPulse Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -495,19 +496,21 @@ def render_landing() -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>今日宜闻 · 乐子入口</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
+    html { background: #fff; }
     html, body { min-height: 100%; }
     body {
       margin: 0;
       overflow: hidden;
       font-family: "Nunito", "PingFang SC", sans-serif;
       color: #f8fdff;
-      background: #72d1eb url("/static/assets/scene/pastoral-4k.png") center bottom / cover no-repeat fixed;
+      background: #fff url("/static/assets/scene/pastoral-4k.png") center bottom / cover no-repeat fixed;
     }
     body::before {
       content: "";
@@ -544,33 +547,6 @@ def render_landing() -> str:
       background: transparent;
       box-shadow: none;
     }
-    .top-meta {
-      position: absolute;
-      right: 0;
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,.92);
-      font-size: 14px;
-      font-weight: 900;
-      text-shadow: 0 2px 14px rgba(0,0,0,.24);
-      white-space: nowrap;
-      text-decoration: none;
-      transition: transform .18s ease, color .18s ease;
-    }
-    .top-meta:hover {
-      color: #fff;
-      transform: translateY(-2px);
-    }
-    .top-meta::after {
-      content: "";
-      width: 132px;
-      height: 2px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.72);
-      box-shadow: 0 0 14px rgba(255,255,255,.24);
-    }
     .brand {
       position: absolute;
       left: 0;
@@ -599,6 +575,8 @@ def render_landing() -> str:
       color: #fff;
       transform: translateY(-2px);
     }
+    span.nav-link { cursor: default; opacity: .78; }
+    span.nav-link:hover { opacity: 1; }
     .bottom-decor {
       position: fixed;
       left: 28px;
@@ -629,7 +607,7 @@ def render_landing() -> str:
       min-height: 100vh;
       display: grid;
       place-items: center;
-      padding: 100px 24px 40px;
+      padding: 40px 24px 40px;
       text-align: center;
     }
     .panel {
@@ -638,15 +616,15 @@ def render_landing() -> str:
       border: 0;
       background: transparent;
       box-shadow: none;
+      transform: translateY(-4vh);
     }
     .fun-link {
-      display: inline-block;
-      margin: 0;
+      display: block;
+      margin: 0 0 14px;
       font-family: "Fredoka", sans-serif;
       font-size: clamp(26px, 4vw, 42px);
       line-height: 1;
       letter-spacing: 0;
-      white-space: nowrap;
       color: #fff;
       text-decoration: none;
       text-shadow: 0 6px 28px rgba(0,0,0,.34);
@@ -666,6 +644,16 @@ def render_landing() -> str:
       outline: 3px solid rgba(255,255,255,.62);
       outline-offset: 8px;
       border-radius: 14px;
+    }
+    .subtitle {
+      display: block;
+      margin: 0;
+      font-family: "Nunito", "PingFang SC", sans-serif;
+      font-size: clamp(13px, 1.6vw, 16px);
+      font-weight: 500;
+      color: rgba(255,255,255,.78);
+      text-shadow: 0 2px 12px rgba(0,0,0,.28);
+      letter-spacing: .02em;
     }
     .float-actions {
       position: fixed;
@@ -771,10 +759,11 @@ def render_landing() -> str:
       .nav { left: 12px; right: 12px; height: auto; min-height: 56px; }
       .brand { position: static; font-size: 20px; }
       .nav-right { position: static; transform: none; gap: 10px; }
-      .top-meta { display: none; }
-      .nav-link { font-size: 13px; }
+
+      .nav-link { font-size: 12px; }
       .bottom-decor { display: none; }
       .fun-link { font-size: clamp(24px, 8vw, 34px); }
+      .subtitle { font-size: clamp(12px, 4vw, 15px); }
     }
   </style>
 </head>
@@ -783,10 +772,14 @@ def render_landing() -> str:
     <div class="brand">今日宜闻</div>
     <div class="nav-right">
       <a class="nav-link" href="/">首页</a>
-      <a class="nav-link" href="/github">乐子</a>
+      <a class="nav-link" href="/github">GitHub</a>
+      <span class="nav-link">AI</span>
+      <span class="nav-link">金融</span>
+      <span class="nav-link">科技</span>
+      <span class="nav-link">生活</span>
       <a class="nav-link" href="/github#site-footer">小站</a>
     </div>
-    <a class="top-meta" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub · AI · Tech</a>
+
   </nav>
   <div class="bottom-decor" aria-hidden="true">
     <span class="line"></span>
@@ -795,6 +788,7 @@ def render_landing() -> str:
   <main class="hero">
     <section class="panel">
       <a class="fun-link" href="/github">你渴望力量吗？</a>
+      <p class="subtitle">获取最新 AI · 科技 · 金融资讯，每日精选，安静阅读。</p>
     </section>
   </main>
   <div class="home-wind" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -850,6 +844,7 @@ def render_github_demo() -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>今日宜闻 · GitHub 乐子雷达</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -882,7 +877,7 @@ def render_github_demo() -> str:
       height: 21vh;
       max-height: 256px;
       overflow: hidden;
-      background: url("/static/assets/scene/pastoral-4k.png") center 62% / cover no-repeat;
+      background: url("/static/assets/scene/cyber-banner.jpg") center 30% / cover no-repeat;
       border-bottom: 1px solid #d5e7e8;
       color: #fff;
     }
@@ -912,12 +907,15 @@ def render_github_demo() -> str:
       justify-content: center;
       flex-wrap: wrap;
     }
-    .nav-links a {
-      text-decoration: none;
+    .nav-links a, .nav-links span {
+      font-size: inherit;
       font-weight: 900;
+      text-decoration: none;
+      color: inherit;
       transition: transform .2s ease, opacity .2s ease;
     }
     .nav-links a:hover { transform: translateY(-2px); opacity: .82; }
+    .nav-links span { opacity: .72; cursor: default; }
     .status {
       font-weight: 900;
       font-size: 14px;
@@ -1118,7 +1116,11 @@ def render_github_demo() -> str:
       <a class="brand" href="/">今日宜闻</a>
       <div class="nav-links">
         <a href="/">首页</a>
-        <a href="#projects">乐子</a>
+        <a href="#projects">GitHub</a>
+        <span>AI</span>
+        <span>金融</span>
+        <span>科技</span>
+        <span>生活</span>
         <a href="#site-footer">小站</a>
       </div>
       <div class="status">近 3 个月 · Top 20</div>
@@ -1133,7 +1135,7 @@ def render_github_demo() -> str:
     <header class="feed-head">
       <div>
         <h2>热门项目</h2>
-        <p>图片做成统一的日漫风景缩略图，下面只保留简介、上架时间和 star 数，先把信息密度压到舒服。</p>
+        <p>涵盖 AI 编码代理、开源工作流、设计系统、知识图谱与命令行工具等前沿领域，近三月高星项目一览。</p>
       </div>
       <div class="source-note">GitHub · __FETCHED__</div>
     </header>

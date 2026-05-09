@@ -65,6 +65,8 @@ PROJECT_KEYWORDS: dict[int, list[str]] = {
     28: ["goddess", "creation", "sculpture", "essence", "transformation", "mystical"],
     29: ["twin dragons", "bridge", "fusion", "collaboration", "harmony", "duality"],
     30: ["blueprint tower", "architecture", "foundation", "structure", "construction", "pillar"],
+    31: ["game studio", "pixel world", "fantasy realm", "adventure", "dungeon", "magic"],
+    32: ["digital soul", "time capsule", "memory crystal", "hologram", "ethereal", "starlight"],
 }
 
 

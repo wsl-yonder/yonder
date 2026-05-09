@@ -115,22 +115,52 @@ def download_image(url: str, dest: Path, label: str = "") -> bool:
 
 def pick_background(project: dict, api_key: str) -> Path | None:
     """Search Pixabay with project-specific keywords for a matching background."""
+    import hashlib, random
+
     rank = project["rank"]
     cached = POOL_DIR / f"project-{rank:02d}.jpg"
     if cached.exists():
         return cached
 
     keywords = PROJECT_KEYWORDS.get(rank, ["technology", "abstract", "digital"])
-    # Try with "anime illustration" prefix first for style consistency
-    results = search_pixabay(
-        ["anime", "illustration"] + keywords, api_key, per_page=5
-    )
+    combined = ["anime", "illustration"] + keywords
+    # Vary search style for diversity
+    style = random.choice(["bright", "dreamy", "vivid", "colorful"])
+    results = search_pixabay(combined + [style], api_key, per_page=10)
     if not results:
-        # Fall back: broader search without anime prefix
-        results = search_pixabay(keywords, api_key, per_page=5)
+        results = search_pixabay(keywords + [style], api_key, per_page=5)
 
-    if results:
-        if download_image(results[0]["largeImageURL"], cached, project["name"]):
+    if not results:
+        return None
+
+    # Collect existing hashes to skip duplicates
+    existing_hashes = set()
+    for f in OUT_DIR.glob("cover-*.jpg"):
+        existing_hashes.add(hashlib.md5(f.read_bytes()).hexdigest())
+
+    random.shuffle(results)
+    for hit in results[:8]:
+        test_path = POOL_DIR / f"test-{rank:02d}.jpg"
+        if download_image(hit["largeImageURL"], test_path, f"test-{rank:02d}"):
+            # Brightness check
+            try:
+                from PIL import Image
+                import statistics
+                img = Image.open(test_path).convert("L")
+                avg = statistics.mean(img.getdata())
+                img.close()
+            except Exception:
+                avg = 128
+            if avg < 80:
+                test_path.unlink()
+                continue
+            # Dedup check
+            h = hashlib.md5(test_path.read_bytes()).hexdigest()
+            if h in existing_hashes:
+                test_path.unlink()
+                continue
+            existing_hashes.add(h)
+            test_path.rename(cached)
             return cached
 
     return None

@@ -3,17 +3,17 @@ AI_NEWS_FETCHED_AT = "2026-05-10"
 AI_ARTICLES = [
     {
         "rank": 1,
-"title": "Anthropic Claude Mythos 因网络攻击能力过强被限制发布",
+"title": "Claude Mythos 因网络攻击被限",
         "source": "TechRepublic",
         "category": "大模型",
-"summary": "英国 AISI 确认 Mythos 在 32 步企业网络渗透测试中 3/10 次成功，成为首个因「太危险「而被限制公开的模型。",
+"summary": "英国 AISI 确认 Mythos 在 32 步企业网络渗透测试中 3/10 次成功，成为首个因「太危险」而被限制公开的模型。",
 "detail": "美国白宫考虑对前沿模型实施 FDA 式安全审查。印度 SEBI 紧急成立网络安全工作组。NSA 据传已在试用 Mythos Preview。",
         "url": "https://www.techrepublic.com/article/ai-agents-data-breaches-and-workforce-shifts-define-this-week-in-tech/",
         "date": "2026-05-08",
     },
     {
         "rank": 2,
-"title": "OpenAI 发布 GPT-5.5 正式版，面向所有用户开放",
+"title": "OpenAI GPT-5.5 全面开放",
         "source": "ID Tech Wire",
         "category": "大模型",
 "summary": "与 Anthropic 路线相反，OpenAI 全面开放 GPT-5.5。AISI 测试显示其专家级网络任务完成率 71.4%。",
@@ -23,7 +23,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 3,
-"title": "Anthropic 租赁 SpaceX 超级计算机 Colossus 1",
+"title": "Anthropic 租下 SpaceX 超算",
         "source": "TechRepublic",
         "category": "硬件",
 "summary": "Anthropic 租下 SpaceX 旗下 300MW 级超算中心，配备 22 万+ NVIDIA GPU，Claude Code 限制翻倍。",
@@ -33,7 +33,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 4,
-"title": "NVIDIA 股价六连跌，科技巨头自研芯片威胁加剧",
+"title": "NVIDIA 六连跌，巨头自研芯片威胁加剧",
         "source": "LA Times",
         "category": "硬件",
 "summary": "NVIDIA 股价六天跌 9%。Amazon Trainium 芯片获 2250 亿美元订单承诺，Anthropic 计划投入 2000 亿美元购买 Google TPU。",
@@ -43,7 +43,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 5,
-"title": "美国五角大楼宣布不再依赖单一 AI 供应商",
+"title": "五角大楼宣布不依赖单一 AI 供应商",
         "source": "TechRepublic",
         "category": "政策",
 "summary": "五角大楼与 8 家 AI 开发商签署协议（排除 Anthropic），正式宣告多元化 AI 供应链战略。",
@@ -53,7 +53,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 6,
-"title": "哈佛研究：AI 在急诊诊断中超越人类医生",
+"title": "哈佛：AI 急诊诊断超越人类医生",
         "source": "Harvard / MIT Sloan",
         "category": "AI 应用",
 "summary": "OpenAI o1-preview 在真实急诊病例诊断中准确率达 67.1%，人类医生为 50-55%。",
@@ -63,7 +63,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 7,
-"title": "欧盟 AI 法案简化：高风险执法推迟，水印加速",
+"title": "欧盟简化 AI 法案，高风险执法推迟",
         "source": "EU / TechRepublic",
         "category": "政策",
 "summary": "欧盟将高风险 AI 执法推迟至 2027 年 12 月，AI 生成内容水印要求提前至 2026 年底。",
@@ -73,7 +73,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 8,
-"title": "Google 秘密测试新 AI Agent 'Remy'，或于 I/O 大会亮相",
+"title": "Google 密测新 Agent Remy",
         "source": "TechRepublic",
         "category": "AI 应用",
 "summary": "Remy 是 Gemini 内部的行动型 AI 代理，能执行超越聊天的实际操作，取代 Project Mariner。",
@@ -83,7 +83,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 9,
-"title": "中国四大实验室 12 天内集中发布开源代码模型",
+"title": "中国四实验室 12 天集中发开源模型",
         "source": "State of AI / O'Reilly",
         "category": "开源",
 "summary": "智谱 GLM-5.1、MiniMax M2.7、月之暗面 Kimi K2.6、DeepSeek V4 先后开源，推理成本仅 Claude Opus 的 1/3。",
@@ -93,7 +93,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 10,
-"title": "Microsoft-OpenAI 联盟重组：结束排他性协议",
+"title": "微软-OpenAI 重组，结束排他协议",
         "source": "State of AI",
         "category": "政策",
 "summary": "微软与 OpenAI 的 2019 年排他协议终止，OpenAI 可从 Oracle、CoreWeave 多渠道获取算力。",
@@ -103,7 +103,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 11,
-"title": "OpenAI 完成 1220 亿美元融资，估值 8520 亿美元",
+"title": "OpenAI 完成 1220 亿美元融资",
         "source": "State of AI",
         "category": "AI 应用",
 "summary": "史上最大私募融资，Q1 完成。Anthropic 据报月底启动新一轮 500 亿美元融资，估值约 9000 亿美元。",
@@ -113,7 +113,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 12,
-"title": "美国白宫考虑对前沿 AI 模型实施 FDA 式安全审批",
+"title": "白宫考虑 FDA 式 AI 安全审批",
         "source": "O'Reilly Radar",
         "category": "政策",
 "summary": "白宫起草行政令，要求 FDA 式预部署安全审查。Commerce Department 已获得多家 AI 公司自愿评估协议。",
@@ -123,7 +123,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 13,
-"title": "Anthropic 与华尔街联手：15 亿美元企业 AI 合资",
+"title": "Anthropic 联手华尔街 15 亿",
         "source": "State of AI",
         "category": "AI 应用",
 "summary": "Anthropic 与 Blackstone、Hellman & Friedman、高盛成立合资公司，向中型企业推广 Claude。",
@@ -133,7 +133,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 14,
-"title": "AI 科学家不会科学推理——2.5 万次实验揭示真相",
+"title": "AI 科学家不会科学推理",
         "source": "O'Reilly Radar",
         "category": "研究",
 "summary": "研究发现 AI 研究代理在 68% 的实验中忽略了证据，仅 26% 的案例中出现反驳驱动的信念修正。",
@@ -143,7 +143,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 15,
-"title": "Physical Intelligence 发布首款零样本通用机器人基础模型",
+"title": "通用机器人基础模型 π0.7 发布",
         "source": "State of AI",
         "category": "研究",
 "summary": "π0.7 模型实现跨形态零样本迁移，在浓缩咖啡和洗衣任务上匹敌甚至超越 RL 微调专家。",
@@ -153,7 +153,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 16,
-"title": "ML-Master 2.0 在 MLE-Bench 实现 56.44% 奖牌率",
+"title": "ML-Master 2.0 突破 MLE-Bench",
         "source": "O'Reilly Radar",
         "category": "研究",
 "summary": "首个突破 50% 奖牌率的机器学习 Agent，采用层级化认知缓存架构，预算控制在 24 小时内。",
@@ -163,7 +163,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 17,
-"title": "Cohere 与 Aleph Alpha 合并，打造'主权 AI'第三极",
+"title": "Cohere 与 Aleph Alpha 合并",
         "source": "State of AI",
         "category": "AI 应用",
 "summary": "两家公司合并以创建美国-中国之外的 AI 替代方案，专注欧洲和新兴市场的数据主权需求。",
@@ -173,7 +173,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 18,
-"title": "Ineffable Intelligence 获欧洲史上最大种子轮 11 亿美元",
+"title": "欧洲 AI 公司获史上最大 11 亿种子轮",
         "source": "State of AI",
         "category": "AI 应用",
 "summary": "欧洲 AI 初创以 51 亿美元估值完成 11 亿美元种子轮，创欧洲种子轮融资纪录。",
@@ -183,7 +183,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 19,
-"title": "Cursor 3 发布：IDE 退居幕后，Agent 成为主界面",
+"title": "Cursor 3：Agent 成主界面",
         "source": "State of AI",
         "category": "AI 应用",
 "summary": "Cursor 3 重新定义 AI 编程体验——不再是编辑器加 AI，而是 AI Agent 加编辑器。",
@@ -193,7 +193,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 20,
-"title": "SAG-AFTRA 达成 AI 表演协议：AI 替代需支付同等报酬",
+"title": "好莱坞：AI 表演需支付同等报酬",
         "source": "TechRepublic",
         "category": "政策",
 "summary": "好莱坞演员工会新协议要求 AI 生成的表演必须获得演员知情同意并支付人类同等报酬。",
@@ -203,7 +203,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 21,
-"title": "NASA 使用 AI 发现 15 颗新系外行星",
+"title": "NASA 用 AI 发现 15 颗系外行星",
         "source": "MIT Sloan AI Dispatch",
         "category": "研究",
 "summary": "NASA 科学家用 AI 分析 TESS 望远镜数据，一次性确认 15 颗新系外行星，其中 3 颗位于宜居带。",
@@ -213,7 +213,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 22,
-"title": "Apple 因误导性 AI 广告以 2.5 亿美元和解",
+"title": "Apple 误导 AI 广告赔 2.5 亿",
         "source": "TechRepublic",
         "category": "AI 应用",
 "summary": "Apple 因 iPhone 16 发布时对 Apple Intelligence Siri 功能的虚假宣传支付 2.5 亿美元集体诉讼和解金。",
@@ -223,7 +223,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 23,
-"title": "DeepSeek 首次外部融资，估值约 450 亿美元",
+"title": "DeepSeek 首轮外部融资 450 亿",
         "source": "State of AI",
         "category": "大模型",
 "summary": "中国大模型独角兽 DeepSeek 启动首轮外部融资，国家集成电路产业基金领投。",
@@ -233,7 +233,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 24,
-"title": "CISA 发布首个 Agentic AI 安全指南",
+"title": "CISA 发布首份 Agentic AI 指南",
         "source": "O'Reilly Radar",
         "category": "政策",
 "summary": "美国网络安全局建议 Agentic AI 先在低风险环境试点，避免授予宽泛的数据访问权限。",
@@ -243,7 +243,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 25,
-"title": "KellyBench 前沿 AI 模型金融决策全败",
+"title": "KellyBench 测试：AI 金融决策全败",
         "source": "O'Reilly Radar",
         "category": "研究",
 "summary": "38 周逆向投注模拟中，所有前沿 AI 模型均亏损。最佳表现者仅得 32.6% 收益率。",
@@ -253,7 +253,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 26,
-"title": "ClawBench 测试：AI 真实网购能力仅 33.3%",
+"title": "AI 真实网购能力仅 33.3%",
         "source": "O'Reilly Radar",
         "category": "研究",
 "summary": "153 项真实网页任务（购物、订票、填报）中，最强模型得分仅 33.3%。",
@@ -263,7 +263,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 27,
-"title": "Coinbase 裁员 700 人转向 AI 原生",
+"title": "Coinbase 裁 700 人转 AI 原生",
         "source": "TechRepublic",
         "category": "AI 应用",
 "summary": "Coinbase 裁减 14% 员工以成为 AI 原生企业。同期 Meta 计划裁员 8000 人转投 AI 基础设施。",
@@ -273,7 +273,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 28,
-"title": "ElevenLabs ARR 突破 5 亿美元",
+"title": "ElevenLabs 营收突破 5 亿美元",
         "source": "State of AI",
         "category": "AI 应用",
 "summary": "AI 语音合成公司 ElevenLabs 成为商业上最成功的纯 AI 公司之一，ARR 超 5 亿美元。",
@@ -283,7 +283,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 29,
-"title": "美国立法者推动 AI 数据中心暂停建设法案",
+"title": "美国推动 AI 数据中心暂停建设法案",
         "source": "O'Reilly Radar",
         "category": "政策",
 "summary": "11 个州提出限制 AI 数据中心建设的法案，参议员 Sanders 和 Ocasio-Cortez 推动联邦级暂停令。",
@@ -293,7 +293,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 30,
-"title": "Peter Thiel 旗下 AI 公司开发波浪能 AI 推理",
+"title": "波浪能 AI 推理公司获 1.4 亿融资",
         "source": "State of AI",
         "category": "硬件",
 "summary": "Panthalassa 完成 1.4 亿美元 B 轮，用海洋波浪能驱动海上 AI 推理数据中心。",
@@ -303,7 +303,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 31,
-"title": "Claude Code Agent 误删生产数据库及备份",
+"title": "Claude Agent 误删生产数据库",
         "source": "TechRepublic",
         "category": "AI 应用",
 "summary": "某公司 Claude Opus 4.6 Agent 因误解指令删除了生产数据库和所有备份。",
@@ -313,7 +313,7 @@ AI_ARTICLES = [
     },
     {
         "rank": 32,
-"title": "OpenAI 宣布'AI 科学家'为新北极星目标",
+"title": "OpenAI 以 AI 科学家为新北极星",
         "source": "State of AI",
         "category": "研究",
 "summary": "OpenAI 告诉 MIT Technology Review，能自主提出假设并实验验证的 AI 科学家是其新北极星。",

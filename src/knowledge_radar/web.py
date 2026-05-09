@@ -1147,7 +1147,7 @@ def render_github_demo() -> str:
     <header class="feed-head">
       <div>
         <h2>热门项目</h2>
-        <p>涵盖 AI 编码代理、开源工作流、设计系统、知识图谱与命令行工具等前沿领域，近三月高星项目一览。</p>
+        <p>AI 编码代理 9 个、CLI 工具 4 个、设计系统与知识图谱各 3 个、个人助手与自动化 5 个，另有硬件、游戏等方向。</p>
       </div>
       <div class="source-note">GitHub · __FETCHED__</div>
     </header>
@@ -1284,8 +1284,8 @@ def render_ai_news() -> str:
     }}
     .feed {{
       width: min(1320px, calc(100% - 44px));
-      margin: 0 auto;
-      padding: 32px 0 60px;
+      margin: 24px auto 0;
+      padding: 0 0 32px;
     }}
     .feed-head {{
       display: flex;
@@ -1298,14 +1298,14 @@ def render_ai_news() -> str:
     .feed-head h2 {{
       margin: 0;
       font-family: "Fredoka",sans-serif;
-      font-size: clamp(22px, 3vw, 30px);
+      font-size: clamp(24px, 3vw, 34px);
+      color: #132f38;
     }}
     .feed-head p {{
-      margin: 6px 0 0;
-      max-width: 720px;
-      color: #597782;
-      font-size: 14px;
-      font-weight: 900;
+      margin: 8px 0 0;
+      color: #5a7883;
+      font-weight: 800;
+      line-height: 1.6;
     }}
     .card-grid {{
       display: grid;
@@ -1454,15 +1454,15 @@ def render_ai_news() -> str:
     </nav>
     <section class="banner-copy">
       <h1>AI 雷达</h1>
-      <p>全球 AI 领域每日精选 32 条——大模型、开源、应用、研究与政策，一条不漏。</p>
+      <p>全球 AI 领域本周精选 32 条——大模型、开源、应用、研究与政策，一条不漏。</p>
     </section>
   </header>
 
   <main class="feed">
     <header class="feed-head">
       <div>
-        <h2>今日 AI</h2>
-        <p>涵盖大模型发布、开源动态、AI 应用落地、前沿研究与政策监管等方向，每日全球 AI 要闻一览。</p>
+        <h2>本周 AI</h2>
+        <p>Mythos 安全争议、NVIDIA 芯片松动、π0.7 机器人突破、AI 金融决策全败、Agent 误删生产库及裁员潮。</p>
       </div>
     </header>
     <section class="card-grid" aria-label="AI 新闻">

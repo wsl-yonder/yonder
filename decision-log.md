@@ -75,9 +75,45 @@
 
 架构：
 
-- `generate_covers.py` — 入口脚本，支持 --rank 单张、--dry-run 预览、--pool-only 建立本地背景池
-- Pixabay 后端：按项目分类关键词搜图，下载到本地背景池，用 Pillow 叠加项目名/技术栈/排名
-- SVG 后端：调用 `generate_project_thumbs.py` 生成 SVG，qlmanage + Pillow 转 JPG
+- `generate_covers.py` — GitHub 封面入口，支持 --rank 单张、--dry-run 预览
+- `generate_ai_covers.py` — AI 新闻封面入口，同样支持 --rank
+- Pixabay 后端：按内容专属关键词搜图 → 亮度过滤（>90）→ MD5 去重 → 风格随机（bright/dreamy/vivid/colorful）→ 本地 pool 缓存
+- 封面为纯净背景图，不叠加任何文字；CSS 负责圆圈编号和文字排版
 - `.env` 中配置 `PIXABAY_API_KEY=`（可选，不配则走 SVG 兜底）
-- 网页 `web.py` 优先使用 `generated-covers/cover-XX.jpg`，无则回退 `anime-thumbs/thumb-XX.svg`
+- 网页优先使用 `github/covers/cover-XX.jpg`，无则回退 `anime-thumbs/thumb-XX.svg`
+
+### 网站整体设计
+
+决定：确立"今日宜闻"三页站点结构和统一设计语言。
+
+页面结构：
+- **首页 (/)** — 入口页，二次元草坪全屏背景，"你渴望力量吗？" CTA + 副标题
+- **GitHub (/github)** — 32 个近三月高星项目，科幻风 banner，4 列卡片网格
+- **AI (/ai)** — 32 条周精选 AI 新闻，AI 主题 banner，同布局
+
+设计原则：
+- 导航栏统一：首页 | GitHub | AI | 金融 | 科技 | 生活 | 小站（后四个待建）
+- 封面统一动漫插画风，按内容匹配，无重复，底色明亮
+- 卡片层级：纯封面 → 圆圈编号 → 标题 → 简介 → 来源/日期
+- 信息双层：Banner 描述页面定位（这是什么页），Feed-head 描述内容构成（具体有什么）
+- 页脚统一诗句收尾，GitHub 用"海阔凭鱼跃，天高任鸟飞"，AI 用"大鹏一日同风起，扶摇直上九万里"
+- 浏览器 chrome 色统一白色，不取页面背景色
+- 内容页标题控制在 14 寸屏一行内，描述约 3/4 行宽
+
+资产组织：
+```
+static/assets/
+├── github/          GitHub 页面专用
+│   ├── banner.jpg   科幻风顶部横幅
+│   ├── covers/      32 张项目封面（960×540 JPG）
+│   └── pool/        Pixabay 下载缓存（gitignore）
+├── ai/              AI 页面专用
+│   ├── banner.jpg   AI 主题顶部横幅
+│   ├── covers/      32 张新闻封面（960×540 JPG）
+│   └── pool/        Pixabay 下载缓存（gitignore）
+├── scene/           首页草坪背景
+└── anime-thumbs/    SVG 兜底封面
+```
+
+后续页面（金融、科技、生活）复用同一管线：建数据模块 → 配关键词 → 跑生成脚本 → 加路由和模板。
 

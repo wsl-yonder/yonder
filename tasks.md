@@ -58,7 +58,13 @@
 - [x] 为 GitHub Top 20 Demo 补充中文名称、中文简介、技术栈、上架时间、star 数和链接。
 - [x] 增加项目封面自动生成脚本：`scripts/generate_project_thumbs.py`。
 - [x] 当前封面可根据项目内容生成动漫科技风 SVG：CLI、Agent、Research、Memory、Graph、Design、Radar 等主题。
-- [ ] 提高项目封面的视觉差异度和精细度，评估接入专业图片生成工具。
+- [x] 提高项目封面的视觉差异度和精细度，评估接入专业图片生成工具。
+  - [x] 建立统一封面生成管线 `scripts/generate_covers.py`，Pixabay API + SVG 双后端。
+  - [x] Pixabay 后端：按项目分类关键词搜图→本地背景池→Pillow 叠加项目文字。
+  - [x] SVG 后端兜底：qlmanage + Pillow 转 JPG，无需任何外部依赖。
+  - [x] 网页优先使用 JPG 封面，无则回退 SVG。
+  - [x] 批量生成 20 个项目封面并验证。
+  - [ ] 注册 Pixabay 免费 API key，测试 Pixabay 后端效果。
 - [ ] 文章详情。
 - [ ] 手动加入/移除日报。
 - [ ] 收藏、隐藏、已读。

@@ -10,6 +10,7 @@ from .db import connect, dashboard_items, dashboard_stats, init_db, latest_diges
 from .github_demo import GITHUB_DEMO_FETCHED_AT, GITHUB_PROJECTS
 
 LOGGER = logging.getLogger(__name__)
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def _escape(value) -> str:
@@ -818,9 +819,14 @@ def render_landing() -> str:
 
 def render_github_demo() -> str:
     project_cards = []
+    covers_dir = ROOT / "static" / "assets" / "generated-covers"
     for project in GITHUB_PROJECTS:
         tech_summary = " · ".join(project["tech"][:2])
-        thumb_path = f"/static/assets/anime-thumbs/thumb-{project['rank']:02d}.svg"
+        jpg_cover = covers_dir / f"cover-{project['rank']:02d}.jpg"
+        if jpg_cover.exists():
+            thumb_path = f"/static/assets/generated-covers/cover-{project['rank']:02d}.jpg"
+        else:
+            thumb_path = f"/static/assets/anime-thumbs/thumb-{project['rank']:02d}.svg"
         project_cards.append(
             f"""
             <article id="project-{project['rank']}" class="bili-card">

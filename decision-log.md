@@ -61,3 +61,23 @@
 - 外部免费图库和随机动漫 API 风格不稳定，且容易出现角色图、版权和安全筛选问题。
 - SVG 本地生成稳定、加载快、可控，适合当前 demo 阶段。
 - 目前封面相似度仍偏高，下一步需要评估 ComfyUI、InvokeAI、Fooocus、Stable Diffusion WebUI Forge 等专门图片生成工具，生成更有差异化的项目封面。
+
+### 封面生成管线：Pixabay + SVG 双后端
+
+决定：建立统一的封面生成管线 `scripts/generate_covers.py`，主后端用 Pixabay API 搜图叠加项目文字，兜底用现有 SVG 生成。
+
+原因：
+
+- 评估了 ComfyUI、Draw Things、qwen-image-mps 等本地做图方案，安装配置重、模型下载慢，不适合当前阶段快速迭代。
+- 评估了 waifu.pics、Nekos API、sanana 等免费动漫 API，内容以角色图为主，不适合项目封面场景。
+- Pixabay 免费 API 提供 600 万+图片，包含动漫风景、科技抽象等类别，可商用无需署名，适合做背景底图。
+- SVG 生成作为无依赖兜底，确保任何时候都能跑通。
+
+架构：
+
+- `generate_covers.py` — 入口脚本，支持 --rank 单张、--dry-run 预览、--pool-only 建立本地背景池
+- Pixabay 后端：按项目分类关键词搜图，下载到本地背景池，用 Pillow 叠加项目名/技术栈/排名
+- SVG 后端：调用 `generate_project_thumbs.py` 生成 SVG，qlmanage + Pillow 转 JPG
+- `.env` 中配置 `PIXABAY_API_KEY=`（可选，不配则走 SVG 兜底）
+- 网页 `web.py` 优先使用 `generated-covers/cover-XX.jpg`，无则回退 `anime-thumbs/thumb-XX.svg`
+

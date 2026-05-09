@@ -6,3 +6,5 @@ out/*.md
 __pycache__/
 *.pyc
 .venv/
+tools/
+static/assets/background-pool/

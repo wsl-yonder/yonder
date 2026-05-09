@@ -1,0 +1,142 @@
+[
+  {
+    "file": "cover-01.jpg",
+    "project": "ultraworkers/claw-code",
+    "name": "爪码 Claw Code",
+    "category": "cli",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-02.jpg",
+    "project": "garrytan/gstack",
+    "name": "Garry 的代理工作台",
+    "category": "agent",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-03.jpg",
+    "project": "karpathy/autoresearch",
+    "name": "自动研究员",
+    "category": "research",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-04.jpg",
+    "project": "VoltAgent/awesome-design-md",
+    "name": "设计规范宝库",
+    "category": "design",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-05.jpg",
+    "project": "paperclipai/paperclip",
+    "name": "纸夹公司编排器",
+    "category": "agent",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-06.jpg",
+    "project": "JuliusBrussee/caveman",
+    "name": "穴居人模式",
+    "category": "agent",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-07.jpg",
+    "project": "MemPalace/mempalace",
+    "name": "记忆宫殿",
+    "category": "memory",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-08.jpg",
+    "project": "chenglou/pretext",
+    "name": "精准文本排版引擎",
+    "category": "text",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-09.jpg",
+    "project": "safishamsi/graphify",
+    "name": "代码知识图谱",
+    "category": "graph",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-10.jpg",
+    "project": "santifer/career-ops",
+    "name": "职业作战系统",
+    "category": "dashboard",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-11.jpg",
+    "project": "addyosmani/agent-skills",
+    "name": "代理技能库",
+    "category": "runtime",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-12.jpg",
+    "project": "nexu-io/open-design",
+    "name": "开放设计工坊",
+    "category": "design",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-13.jpg",
+    "project": "HKUDS/CLI-Anything",
+    "name": "万物命令行",
+    "category": "cli",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-14.jpg",
+    "project": "zeroclaw-labs/zeroclaw",
+    "name": "零爪个人助手底座",
+    "category": "agent",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-15.jpg",
+    "project": "Gitlawb/openclaude",
+    "name": "开放 Claude 客户端",
+    "category": "runtime",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-16.jpg",
+    "project": "googleworkspace/cli",
+    "name": "Google Workspace 命令行",
+    "category": "cli",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-17.jpg",
+    "project": "AlexsJones/llmfit",
+    "name": "本机模型适配器",
+    "category": "runtime",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-18.jpg",
+    "project": "openai/symphony",
+    "name": "交响乐任务编排",
+    "category": "agent",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-19.jpg",
+    "project": "NVIDIA/NemoClaw",
+    "name": "NVIDIA 安全开放爪",
+    "category": "security",
+    "source": "svg-fallback"
+  },
+  {
+    "file": "cover-20.jpg",
+    "project": "NawfalMotii79/PLFM_RADAR",
+    "name": "低成本相控阵雷达",
+    "category": "radar",
+    "source": "svg-fallback"
+  }
+]

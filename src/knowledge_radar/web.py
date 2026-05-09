@@ -8,6 +8,7 @@ from pathlib import Path
 from .config import channel_labels, load_settings
 from .db import connect, dashboard_items, dashboard_stats, init_db, latest_digest
 from .github_demo import GITHUB_DEMO_FETCHED_AT, GITHUB_PROJECTS
+from .ai_news import AI_NEWS_FETCHED_AT, AI_ARTICLES
 
 LOGGER = logging.getLogger(__name__)
 ROOT = Path(__file__).resolve().parents[2]
@@ -773,7 +774,7 @@ def render_landing() -> str:
     <div class="nav-right">
       <a class="nav-link" href="/">首页</a>
       <a class="nav-link" href="/github">GitHub</a>
-      <span class="nav-link">AI</span>
+      <a class="nav-link" href="/ai">AI</a>
       <span class="nav-link">金融</span>
       <span class="nav-link">科技</span>
       <span class="nav-link">生活</span>
@@ -1128,7 +1129,7 @@ def render_github_demo() -> str:
       <div class="nav-links">
         <a href="/">首页</a>
         <a href="#projects">GitHub</a>
-        <span>AI</span>
+        <a href="/ai">AI</a>
         <span>金融</span>
         <span>科技</span>
         <span>生活</span>
@@ -1163,6 +1164,311 @@ def render_github_demo() -> str:
         page.replace("__PROJECT_CARDS__", "".join(project_cards))
         .replace("__FETCHED__", _escape(GITHUB_DEMO_FETCHED_AT))
     )
+
+
+def render_ai_news() -> str:
+    card_html = []
+    covers_dir = ROOT / "static" / "assets" / "ai" / "covers"
+    for article in AI_ARTICLES:
+        cover_path = covers_dir / f"cover-{article['rank']:02d}.jpg"
+        if cover_path.exists():
+            thumb = f"/static/assets/ai/covers/cover-{article['rank']:02d}.jpg"
+        else:
+            thumb = ""
+        card_html.append(
+            f"""
+            <article id="a{article['rank']}" class="bili-card">
+              <a class="thumb" href="{_escape(article['url'])}" target="_blank" rel="noopener noreferrer">
+                <img src="{thumb}" alt="{_escape(article['title'])}" loading="lazy">
+                <span class="ai-cat">{_escape(article['category'])}</span>
+              </a>
+              <h2><a href="{_escape(article['url'])}" target="_blank" rel="noopener noreferrer"><span class="rank-num">{article['rank']}</span> {_escape(article['title'])}</a></h2>
+              <p class="summary">{_escape(article['summary'])}</p>
+              <div class="card-meta">
+                <span>{_escape(article['source'])}</span>
+                <span>{_escape(article.get('date', ''))}</span>
+              </div>
+              <p class="detail">{_escape(article['detail'])}</p>
+            </article>"""
+        )
+
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>今日宜闻 · AI 雷达</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {{
+      --cyan: #176d81;
+      --shadow: 0 9px 36px rgba(44,86,104,.08);
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      font-family: "Nunito", "PingFang SC", sans-serif;
+      color: #264650;
+      background: #f5fafb;
+    }}
+    .hero-banner {{
+      position: relative;
+      min-height: 188px;
+      height: 21vh;
+      max-height: 256px;
+      overflow: hidden;
+      background: url("/static/assets/ai/banner.jpg") center 35% / cover no-repeat;
+      border-bottom: 1px solid #d5e7e8;
+      color: #fff;
+    }}
+    .topbar {{
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      color: #fff;
+    }}
+    .topbar a.brand {{
+      font-family: "Fredoka",sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: inherit;
+      text-decoration: none;
+      text-shadow: 0 3px 16px rgba(0,0,0,.26);
+    }}
+    .nav-links {{
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }}
+    .nav-links a, .nav-links span {{
+      font-size: inherit;
+      font-weight: 900;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s ease, opacity .2s ease;
+    }}
+    .nav-links a:hover {{ transform: translateY(-2px); opacity: .82; }}
+    .nav-links span {{ opacity: .72; cursor: default; }}
+    .status {{
+      font-size: 13px;
+      font-weight: 900;
+      text-shadow: 0 2px 12px rgba(0,0,0,.26);
+      opacity: .9;
+    }}
+    .banner-copy {{
+      position: relative;
+      z-index: 2;
+      width: min(1320px, calc(100% - 44px));
+      margin: 42px auto 0;
+      text-shadow: 0 3px 20px rgba(0,0,0,.28);
+    }}
+    .banner-copy h1 {{
+      margin: 0;
+      font-family: "Fredoka", sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1;
+    }}
+    .banner-copy p {{
+      margin: 10px 0 0;
+      max-width: 900px;
+      font-weight: 900;
+      line-height: 1.55;
+    }}
+    .feed {{
+      width: min(1320px, calc(100% - 44px));
+      margin: 0 auto;
+      padding: 32px 0 60px;
+    }}
+    .feed-head {{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }}
+    .feed-head h2 {{
+      margin: 0;
+      font-family: "Fredoka",sans-serif;
+      font-size: clamp(22px, 3vw, 30px);
+    }}
+    .feed-head p {{
+      margin: 6px 0 0;
+      max-width: 720px;
+      color: #597782;
+      font-size: 14px;
+      font-weight: 900;
+    }}
+    .card-grid {{
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px 20px;
+    }}
+    .bili-card {{
+      position: relative;
+      min-width: 0;
+    }}
+    .thumb {{
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #dff1ef;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    }}
+    .thumb::after {{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13,38,44,0) 48%, rgba(13,38,44,.5));
+      pointer-events: none;
+    }}
+    .thumb img {{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }}
+    .thumb:hover {{
+      transform: translateY(-3px);
+      box-shadow: 0 18px 42px rgba(28,75,92,.16);
+      filter: saturate(1.06) brightness(1.02);
+    }}
+    .ai-cat {{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(23,109,129,.82);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      backdrop-filter: blur(8px);
+    }}
+    .bili-card h2 {{
+      margin: 10px 0 0;
+      font-size: clamp(14px, 1.3vw, 16px);
+      font-weight: 900;
+      line-height: 1.45;
+    }}
+    .bili-card h2 a {{
+      text-decoration: none;
+    }}
+    .bili-card h2 a:hover {{ color: var(--cyan); }}
+    .rank-num {{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #316473;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      vertical-align: middle;
+      margin-right: 6px;
+    }}
+    .summary {{
+      display: -webkit-box;
+      min-height: 44px;
+      margin: 6px 0 0;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      color: #475b65;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.55;
+    }}
+    .card-meta {{
+      display: flex;
+      gap: 12px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #738f99;
+    }}
+    .detail {{
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: #6d848e;
+      line-height: 1.6;
+      display: none;
+    }}
+    .site-footer {{
+      text-align: center;
+      padding: 48px 24px 32px;
+      font-size: 13px;
+      color: #8da6ae;
+      font-weight: 900;
+      background: url("/static/assets/scene/pastoral-4k.png") center bottom / cover no-repeat;
+    }}
+    @media (max-width: 960px) {{
+      .card-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+      .nav-links {{ gap: 16px; }}
+    }}
+    @media (max-width: 640px) {{
+      .hero-banner {{ height: 240px; }}
+      .card-grid {{ grid-template-columns: 1fr; }}
+      .nav-links {{ width: 100%; justify-content: space-between; }}
+      .status {{ display: none; }}
+    }}
+  </style>
+</head>
+<body>
+  <header class="hero-banner">
+    <nav class="topbar" aria-label="顶部导航">
+      <a class="brand" href="/">今日宜闻</a>
+      <div class="nav-links">
+        <a href="/">首页</a>
+        <a href="/github">GitHub</a>
+        <a href="/ai">AI</a>
+        <span>金融</span>
+        <span>科技</span>
+        <span>生活</span>
+        <a href="#site-footer">小站</a>
+      </div>
+      <div class="status">{AI_NEWS_FETCHED_AT} · Top 32</div>
+    </nav>
+    <section class="banner-copy">
+      <h1>AI 雷达</h1>
+      <p>全球 AI 领域每日精选 32 条——大模型、开源、应用、研究与政策，一条不漏。</p>
+    </section>
+  </header>
+
+  <main class="feed">
+    <header class="feed-head">
+      <div>
+        <h2>今日 AI</h2>
+        <p>涵盖大模型发布、开源动态、AI 应用落地、前沿研究与政策监管等方向，每日全球 AI 要闻一览。</p>
+      </div>
+    </header>
+    <section class="card-grid" aria-label="AI 新闻">
+      {"".join(card_html)}
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer">
+    <p>今日宜闻 · 信息雷达</p>
+    <p style="margin:4px 0 0;font-size:12px;opacity:.78">获取最新 AI · 科技 · 金融资讯，每日精选，安静阅读。</p>
+  </footer>
+</body>
+</html>"""
 
 
 def render_scene_demo() -> str:
@@ -1292,6 +1598,11 @@ class DashboardHandler(BaseHTTPRequestHandler):
 
         if parsed.path in {"/github", "/daily"}:
             body = render_github_demo().encode("utf-8")
+            self._send_html(body)
+            return
+
+        if parsed.path == "/ai":
+            body = render_ai_news().encode("utf-8")
             self._send_html(body)
             return
 

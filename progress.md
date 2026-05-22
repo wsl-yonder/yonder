@@ -70,3 +70,4 @@
 - Validation: 已运行 `PYTHONPATH=src python3 -m compileall src/yonder`、`PYTHONPATH=src python3 -m yonder.cli --version`、`PYTHONPATH=src python3 -m yonder.cli export-static`；已重启 8765 服务并验证首页、GitHub、AI 页面返回正常。
 - Checkpoint: 第三阶段 Cloudflare Pages 部署配置完成。新增 `wrangler.toml` 与 `docs/deployment.md`，GitHub Actions 在导出 `dist/` 并上传 `yonder-dist` artifact 后，会通过 `cloudflare/wrangler-action@v3` 执行 `pages deploy dist --project-name=yonder`。
 - Next: 需要在 GitHub 仓库 Actions Secrets 中填入 `CLOUDFLARE_API_TOKEN` 与 `CLOUDFLARE_ACCOUNT_ID`，然后手动运行一次 workflow 验证线上地址。
+- Fix: 首次运行 Actions 时 Cloudflare 返回 `Project not found`，已在 workflow 中加入“Ensure Cloudflare Pages project exists”步骤，通过 Cloudflare API 自动创建 `yonder` Pages 项目后再部署。

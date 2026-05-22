@@ -8,7 +8,7 @@ Yonder 的公网部署走 Cloudflare Pages Direct Upload：
 
 ## Cloudflare 准备
 
-在 Cloudflare Dashboard 创建或准备一个 Pages 项目：
+当前 GitHub Actions 会自动创建 Cloudflare Pages 项目。如果想手动提前创建，也可以在 Cloudflare Dashboard 创建：
 
 - Project name: `yonder`
 - Production branch: `main`

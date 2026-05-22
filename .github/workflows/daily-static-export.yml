@@ -57,13 +57,62 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
+      - name: Ensure Cloudflare Pages project exists
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.error
+          import urllib.request
+
+          account_id = os.environ["CLOUDFLARE_ACCOUNT_ID"]
+          token = os.environ["CLOUDFLARE_API_TOKEN"]
+          project_name = os.environ["CLOUDFLARE_PROJECT_NAME"]
+          base_url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects"
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Content-Type": "application/json",
+          }
+
+          def request(method, url, payload=None):
+              data = json.dumps(payload).encode("utf-8") if payload else None
+              req = urllib.request.Request(url, data=data, headers=headers, method=method)
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as resp:
+                      return resp.status, json.load(resp)
+              except urllib.error.HTTPError as exc:
+                  try:
+                      body = json.load(exc)
+                  except Exception:
+                      body = {"errors": [{"message": exc.read().decode("utf-8", "replace")}]}
+                  return exc.code, body
+
+          status, payload = request("GET", f"{base_url}/{project_name}")
+          if status == 200 and payload.get("success"):
+              print(f"Cloudflare Pages project already exists: {project_name}")
+              sys.exit(0)
+
+          create_payload = {"name": project_name, "production_branch": "main"}
+          status, payload = request("POST", base_url, create_payload)
+          if status in (200, 201) and payload.get("success"):
+              print(f"Created Cloudflare Pages project: {project_name}")
+              sys.exit(0)
+
+          print(json.dumps(payload, ensure_ascii=False, indent=2))
+          raise SystemExit(f"Could not ensure Cloudflare Pages project {project_name}; HTTP {status}")
+          PY
+
       - name: Deploy to Cloudflare Pages
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}
+          command: pages deploy dist --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }} --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print deployment URL

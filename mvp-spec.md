@@ -1,4 +1,4 @@
-# Knowledge Radar 推送助手 MVP Spec
+# Yonder 推送助手 MVP Spec
 
 创建日期：2026-05-09
 

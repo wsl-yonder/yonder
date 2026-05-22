@@ -51,7 +51,7 @@ def _split_int_csv(value: str) -> List[int]:
 def load_settings(project_root: Path) -> Settings:
     load_dotenv(project_root / ".env")
 
-    database_path = Path(os.environ.get("DATABASE_PATH", "data/knowledge_radar.sqlite3"))
+    database_path = Path(os.environ.get("DATABASE_PATH", "data/yonder.sqlite3"))
     sources_path = Path(os.environ.get("SOURCES_PATH", "config/sources.json"))
     output_dir = Path(os.environ.get("OUTPUT_DIR", "out"))
 

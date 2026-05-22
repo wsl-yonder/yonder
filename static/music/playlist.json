@@ -1,0 +1,787 @@
+{
+  "name": "今日宜闻 · 中文热歌试听榜",
+  "description": "20 首热门中文歌曲试听歌单，音源使用 iTunes Search API 返回的 30 秒公开试听片段；适合先验证歌单、播放器、迷你播放状态和歌词动效。Previews provided courtesy of iTunes.",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/45/8a/e4/458ae484-dc8b-5683-ce04-8d2948346462/JAY.jpg/600x600bb.jpg",
+  "tracks": [
+    {
+      "title": "晴天",
+      "artist": "周杰伦",
+      "album": "叶惠美",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/46/5d/68465d87-99db-f0e5-dcdb-5b8e3fe64a49/mzaf_4654864440578879672.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/45/8a/e4/458ae484-dc8b-5683-ce04-8d2948346462/JAY.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "23.7w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E6%99%B4%E5%A4%A9/535824731?i=535824738&uo=4",
+      "description": "周杰伦《晴天》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "前奏响起，记忆像光落下来"
+        },
+        {
+          "time": 6,
+          "text": "旋律把今天慢慢推远"
+        },
+        {
+          "time": 12,
+          "text": "一句熟悉的副歌，刚好经过心口"
+        },
+        {
+          "time": 18,
+          "text": "把音量调低一点，也能听见风"
+        },
+        {
+          "time": 24,
+          "text": "歌声停下，故事还在继续"
+        }
+      ]
+    },
+    {
+      "title": "七里香",
+      "artist": "周杰伦",
+      "album": "七里香",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/4e/e2/994ee285-7c0d-73ab-85b7-8d3899a17242/mzaf_12441330510018253101.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/29/c1/2d/29c12de6-54b4-f549-9d9f-07d8a04221ea/JAY.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "22.4w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E4%B8%83%E9%87%8C%E9%A6%99/536114662?i=536115195&uo=4",
+      "description": "周杰伦《七里香》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "从第一拍开始，情绪慢慢铺开"
+        },
+        {
+          "time": 6,
+          "text": "街灯和耳机一起亮起来"
+        },
+        {
+          "time": 12,
+          "text": "副歌像一封没有寄出的信"
+        },
+        {
+          "time": 18,
+          "text": "时间往前走，旋律留在原地"
+        },
+        {
+          "time": 24,
+          "text": "下一段生活，继续播放"
+        }
+      ]
+    },
+    {
+      "title": "告白气球",
+      "artist": "周杰伦",
+      "album": "周杰伦的床边故事",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/8f/bc/20/8fbc20d5-ed30-3c34-7e66-2201ffba3695/mzaf_1061751424505493111.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/28/f4/5828f491-62ab-61b6-25b4-23838e4f1dcf/dj.sxbqzong.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "21.1w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83/1118757859?i=1118757877&uo=4",
+      "description": "周杰伦《告白气球》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "人声从远处靠近"
+        },
+        {
+          "time": 6,
+          "text": "鼓点把回忆轻轻托起"
+        },
+        {
+          "time": 12,
+          "text": "有些句子不用唱完也懂"
+        },
+        {
+          "time": 18,
+          "text": "夜色里有一点温柔的亮"
+        },
+        {
+          "time": 24,
+          "text": "音乐收束，心跳还在回响"
+        }
+      ]
+    },
+    {
+      "title": "稻香",
+      "artist": "周杰伦",
+      "album": "魔杰座",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/c3/c4/e0/c3c4e033-2bd0-e0fc-3195-3ec68299f19f/mzaf_9545722078596740089.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1b/63/9e/1b639e5b-f8ca-a6e1-8612-6396bc9ff0eb/4711448407424.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "20.8w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E7%A8%BB%E9%A6%99/1624000713?i=1624001324&uo=4",
+      "description": "周杰伦《稻香》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "前奏响起，记忆像光落下来"
+        },
+        {
+          "time": 6,
+          "text": "旋律把今天慢慢推远"
+        },
+        {
+          "time": 12,
+          "text": "一句熟悉的副歌，刚好经过心口"
+        },
+        {
+          "time": 18,
+          "text": "把音量调低一点，也能听见风"
+        },
+        {
+          "time": 24,
+          "text": "歌声停下，故事还在继续"
+        }
+      ]
+    },
+    {
+      "title": "夜曲",
+      "artist": "周杰伦",
+      "album": "11月的萧邦",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cd/80/49/cd8049a8-f655-a320-fe39-399582e94ed4/mzaf_2752455179820135985.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9e/35/ad/9e35ad1e-749e-75b6-0539-1e80cea1817b/JAY11.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "19.5w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%A4%9C%E6%9B%B2/536009641?i=536009642&uo=4",
+      "description": "周杰伦《夜曲》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "从第一拍开始，情绪慢慢铺开"
+        },
+        {
+          "time": 6,
+          "text": "街灯和耳机一起亮起来"
+        },
+        {
+          "time": 12,
+          "text": "副歌像一封没有寄出的信"
+        },
+        {
+          "time": 18,
+          "text": "时间往前走，旋律留在原地"
+        },
+        {
+          "time": 24,
+          "text": "下一段生活，继续播放"
+        }
+      ]
+    },
+    {
+      "title": "修炼爱情",
+      "artist": "林俊杰",
+      "album": "因你 而在",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/eb/c1/b1/ebc1b18f-a93f-9b30-7be0-162d4616260d/mzaf_12848033625478567269.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/86/80/48/86804834-eb90-62a1-2170-cd96f9963cac/4711099729722.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "18.2w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E4%BF%AE%E7%82%BC%E7%88%B1%E6%83%85/1694849133?i=1694849138&uo=4",
+      "description": "林俊杰《修炼爱情》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "人声从远处靠近"
+        },
+        {
+          "time": 6,
+          "text": "鼓点把回忆轻轻托起"
+        },
+        {
+          "time": 12,
+          "text": "有些句子不用唱完也懂"
+        },
+        {
+          "time": 18,
+          "text": "夜色里有一点温柔的亮"
+        },
+        {
+          "time": 24,
+          "text": "音乐收束，心跳还在回响"
+        }
+      ]
+    },
+    {
+      "title": "可惜没如果",
+      "artist": "林俊杰",
+      "album": "新地球",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/3a/3c/783a3ce8-65d7-0527-3ddc-0d6fa80ae1ac/mzaf_7010661630560700140.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/5a/1b/575a1bc9-ca86-7549-e873-b55663ba6276/4711508105925.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "17.9w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%8F%AF%E6%83%9C%E6%B2%A1%E5%A6%82%E6%9E%9C/1788007687?i=1788007696&uo=4",
+      "description": "林俊杰《可惜没如果》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "前奏响起，记忆像光落下来"
+        },
+        {
+          "time": 6,
+          "text": "旋律把今天慢慢推远"
+        },
+        {
+          "time": 12,
+          "text": "一句熟悉的副歌，刚好经过心口"
+        },
+        {
+          "time": 18,
+          "text": "把音量调低一点，也能听见风"
+        },
+        {
+          "time": 24,
+          "text": "歌声停下，故事还在继续"
+        }
+      ]
+    },
+    {
+      "title": "光年之外 (G.E.M.重生版)",
+      "artist": "邓紫棋",
+      "album": "I AM GLORIA",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/3a/27/ec3a272c-3129-d202-631d-9c99ce93bbe4/mzaf_16728419973496340579.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/57/ea/5657ea0c-b59b-c504-9db7-016de7faeb3f/196873159782.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "16.6w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%85%89%E5%B9%B4%E4%B9%8B%E5%A4%96-g-e-m-%E9%87%8D%E7%94%9F%E7%89%88/1818540352?i=1818540480&uo=4",
+      "description": "邓紫棋《光年之外 (G.E.M.重生版)》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "从第一拍开始，情绪慢慢铺开"
+        },
+        {
+          "time": 6,
+          "text": "街灯和耳机一起亮起来"
+        },
+        {
+          "time": 12,
+          "text": "副歌像一封没有寄出的信"
+        },
+        {
+          "time": 18,
+          "text": "时间往前走，旋律留在原地"
+        },
+        {
+          "time": 24,
+          "text": "下一段生活，继续播放"
+        }
+      ]
+    },
+    {
+      "title": "泡沫 (Live)",
+      "artist": "邓紫棋",
+      "album": "我是歌手第二季 (第一期 Live)",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/74/c1/b7/74c1b7c2-49fc-25d5-0a7d-edddf8a1313b/mzaf_2853747767911711405.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b0/b0/6c/b0b06c90-72e6-31a7-2e87-38f9e4121775/cover.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "15.3w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E6%B3%A1%E6%B2%AB-live/1696034737?i=1696035051&uo=4",
+      "description": "邓紫棋《泡沫 (Live)》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "人声从远处靠近"
+        },
+        {
+          "time": 6,
+          "text": "鼓点把回忆轻轻托起"
+        },
+        {
+          "time": 12,
+          "text": "有些句子不用唱完也懂"
+        },
+        {
+          "time": 18,
+          "text": "夜色里有一点温柔的亮"
+        },
+        {
+          "time": 24,
+          "text": "音乐收束，心跳还在回响"
+        }
+      ]
+    },
+    {
+      "title": "句号",
+      "artist": "邓紫棋",
+      "album": "摩天动物园",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/56/47/04/564704a0-136f-3787-6638-b9db21357558/mzaf_5161706041947956307.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a8/59/dd/a859ddfd-0f50-4987-0301-2117bd152c4c/886448203414.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "14.0w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%8F%A5%E5%8F%B7/1491477494?i=1491477507&uo=4",
+      "description": "邓紫棋《句号》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "前奏响起，记忆像光落下来"
+        },
+        {
+          "time": 6,
+          "text": "旋律把今天慢慢推远"
+        },
+        {
+          "time": 12,
+          "text": "一句熟悉的副歌，刚好经过心口"
+        },
+        {
+          "time": 18,
+          "text": "把音量调低一点，也能听见风"
+        },
+        {
+          "time": 24,
+          "text": "歌声停下，故事还在继续"
+        }
+      ]
+    },
+    {
+      "title": "十年",
+      "artist": "陈奕迅",
+      "album": "陈奕迅 国语精选",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c9/4f/5b/c94f5b47-afae-60ac-6e4b-9aa13f660e91/mzaf_10320682144327265434.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/61/9b/5d/619b5d98-0126-7040-dac2-c986f410738e/dj.qxqmsxvw.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "13.7w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%8D%81%E5%B9%B4/651455891?i=651456011&uo=4",
+      "description": "陈奕迅《十年》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "从第一拍开始，情绪慢慢铺开"
+        },
+        {
+          "time": 6,
+          "text": "街灯和耳机一起亮起来"
+        },
+        {
+          "time": 12,
+          "text": "副歌像一封没有寄出的信"
+        },
+        {
+          "time": 18,
+          "text": "时间往前走，旋律留在原地"
+        },
+        {
+          "time": 24,
+          "text": "下一段生活，继续播放"
+        }
+      ]
+    },
+    {
+      "title": "孤勇者 (《英雄联盟:双城之战》动画剧集中文主题曲)",
+      "artist": "陈奕迅",
+      "album": "孤勇者 (《英雄联盟:双城之战》动画剧集中文主题曲) - Single",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/31/35/b4/3135b4b3-7114-a942-63fd-965b3d89b2f0/mzaf_15887828140860406970.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ba/5f/00/ba5f0080-5be8-9cc0-9b9d-ca074a4948dd/21UM1IM37254.rgb.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "12.4w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%AD%A4%E5%8B%87%E8%80%85-%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F-%E5%8F%8C%E5%9F%8E%E4%B9%8B%E6%88%98-%E5%8A%A8%E7%94%BB%E5%89%A7%E9%9B%86%E4%B8%AD%E6%96%87%E4%B8%BB%E9%A2%98%E6%9B%B2/1596944315?i=1596944703&uo=4",
+      "description": "陈奕迅《孤勇者 (《英雄联盟:双城之战》动画剧集中文主题曲)》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "人声从远处靠近"
+        },
+        {
+          "time": 6,
+          "text": "鼓点把回忆轻轻托起"
+        },
+        {
+          "time": 12,
+          "text": "有些句子不用唱完也懂"
+        },
+        {
+          "time": 18,
+          "text": "夜色里有一点温柔的亮"
+        },
+        {
+          "time": 24,
+          "text": "音乐收束，心跳还在回响"
+        }
+      ]
+    },
+    {
+      "title": "平凡之路 (Live)",
+      "artist": "朴树",
+      "album": "大事发声.录音棚现场: 朴树 猎户星座 专场 (超级版)",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/c9/8d/b6/c98db67f-3c17-6162-05ed-29f05bdf7d84/mzaf_11782784385820067089.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6a/a0/5b/6aa05b3d-466e-9afa-729e-920cd10e4de4/193017040241.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "11.1w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF-live/1599238398?i=1599238409&uo=4",
+      "description": "朴树《平凡之路 (Live)》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "前奏响起，记忆像光落下来"
+        },
+        {
+          "time": 6,
+          "text": "旋律把今天慢慢推远"
+        },
+        {
+          "time": 12,
+          "text": "一句熟悉的副歌，刚好经过心口"
+        },
+        {
+          "time": 18,
+          "text": "把音量调低一点，也能听见风"
+        },
+        {
+          "time": 24,
+          "text": "歌声停下，故事还在继续"
+        }
+      ]
+    },
+    {
+      "title": "演员",
+      "artist": "薛之谦",
+      "album": "初学者",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4a/84/38/4a8438ec-11dc-e2d2-57a0-eb7dbfe6598d/mzaf_9490533627010664214.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b0/09/04/b009043f-f576-54ce-5b1f-d7896d6933c0/9555150772273.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "10.8w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E6%BC%94%E5%91%98/1787929894?i=1787930244&uo=4",
+      "description": "薛之谦《演员》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "从第一拍开始，情绪慢慢铺开"
+        },
+        {
+          "time": 6,
+          "text": "街灯和耳机一起亮起来"
+        },
+        {
+          "time": 12,
+          "text": "副歌像一封没有寄出的信"
+        },
+        {
+          "time": 18,
+          "text": "时间往前走，旋律留在原地"
+        },
+        {
+          "time": 24,
+          "text": "下一段生活，继续播放"
+        }
+      ]
+    },
+    {
+      "title": "年少有为",
+      "artist": "李荣浩",
+      "album": "年少有为 - Single",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/03/48/06/0348068c-695c-c9e8-4af4-9252eecfa928/mzaf_8417319676253759973.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d8/ac/3f/d8ac3f61-3bd6-6aff-a0aa-470490c581e6/190295575816.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "9.5w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%B9%B4%E5%B0%91%E6%9C%89%E4%B8%BA/1411930189?i=1411930194&uo=4",
+      "description": "李荣浩《年少有为》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "人声从远处靠近"
+        },
+        {
+          "time": 6,
+          "text": "鼓点把回忆轻轻托起"
+        },
+        {
+          "time": 12,
+          "text": "有些句子不用唱完也懂"
+        },
+        {
+          "time": 18,
+          "text": "夜色里有一点温柔的亮"
+        },
+        {
+          "time": 24,
+          "text": "音乐收束，心跳还在回响"
+        }
+      ]
+    },
+    {
+      "title": "体面(《前任3 再见前任》电影插曲)",
+      "artist": "于文文",
+      "album": "体面(《前任3 再见前任》电影插曲) - Single",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/fd/b6/3dfdb6d6-1fb6-f503-795f-4116a5544cee/mzaf_2326102125570133470.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7d/ea/0b/7dea0b30-7bad-df29-e265-84f18ec5bc7a/4711281411343.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "8.2w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E4%BD%93%E9%9D%A2-%E5%89%8D%E4%BB%BB3-%E5%86%8D%E8%A7%81%E5%89%8D%E4%BB%BB-%E7%94%B5%E5%BD%B1%E6%8F%92%E6%9B%B2/1888421779?i=1888421780&uo=4",
+      "description": "于文文《体面(《前任3 再见前任》电影插曲)》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "前奏响起，记忆像光落下来"
+        },
+        {
+          "time": 6,
+          "text": "旋律把今天慢慢推远"
+        },
+        {
+          "time": 12,
+          "text": "一句熟悉的副歌，刚好经过心口"
+        },
+        {
+          "time": 18,
+          "text": "把音量调低一点，也能听见风"
+        },
+        {
+          "time": 24,
+          "text": "歌声停下，故事还在继续"
+        }
+      ]
+    },
+    {
+      "title": "起风了",
+      "artist": "买辣椒也用券",
+      "album": "起风了 - Single",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/d7/ce/86/d7ce8662-3730-00f1-3adf-81e4eded982b/mzaf_10195253543146295334.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f0/69/86/f069863e-f4fb-2825-be92-b322ea32376d/4894944016823.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "7.9w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E8%B5%B7%E9%A3%8E%E4%BA%86/1681030618?i=1681030619&uo=4",
+      "description": "买辣椒也用券《起风了》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "从第一拍开始，情绪慢慢铺开"
+        },
+        {
+          "time": 6,
+          "text": "街灯和耳机一起亮起来"
+        },
+        {
+          "time": 12,
+          "text": "副歌像一封没有寄出的信"
+        },
+        {
+          "time": 18,
+          "text": "时间往前走，旋律留在原地"
+        },
+        {
+          "time": 24,
+          "text": "下一段生活，继续播放"
+        }
+      ]
+    },
+    {
+      "title": "慢冷",
+      "artist": "梁静茹",
+      "album": "我好吗?-太阳如常升起",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/2c/42/ab/2c42ab0e-9a70-3514-7229-99c047de7167/mzaf_15762198927089819958.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/41/ed/71/41ed7185-f6ca-722c-5ecd-c3b6f9782ff4/6942360842927.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "6.6w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E6%85%A2%E5%86%B7/1708358632?i=1708358642&uo=4",
+      "description": "梁静茹《慢冷》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "人声从远处靠近"
+        },
+        {
+          "time": 6,
+          "text": "鼓点把回忆轻轻托起"
+        },
+        {
+          "time": 12,
+          "text": "有些句子不用唱完也懂"
+        },
+        {
+          "time": 18,
+          "text": "夜色里有一点温柔的亮"
+        },
+        {
+          "time": 24,
+          "text": "音乐收束，心跳还在回响"
+        }
+      ]
+    },
+    {
+      "title": "后来 (Live)",
+      "artist": "刘若英",
+      "album": "刘若英 Renext 我敢 世界巡回演唱会 LIVE",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/71/6e/81/716e815d-891e-5588-7bf9-cfe126c746d4/mzaf_17064384816910176138.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ca/cc/dc/caccdc99-4b44-f163-2abf-6c3b1f5d4fca/iTunes_-_1500X1500.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "5.3w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%90%8E%E6%9D%A5-live/1267714928?i=1267715303&uo=4",
+      "description": "刘若英《后来 (Live)》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "前奏响起，记忆像光落下来"
+        },
+        {
+          "time": 6,
+          "text": "旋律把今天慢慢推远"
+        },
+        {
+          "time": 12,
+          "text": "一句熟悉的副歌，刚好经过心口"
+        },
+        {
+          "time": 18,
+          "text": "把音量调低一点，也能听见风"
+        },
+        {
+          "time": 24,
+          "text": "歌声停下，故事还在继续"
+        }
+      ]
+    },
+    {
+      "title": "小幸运 (电影《我的少女时代》主题曲)",
+      "artist": "田馥甄",
+      "album": "小幸运 (电影《我的少女时代》主题曲) - Single",
+      "src": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/de/dc/f6/dedcf636-8142-716b-af7d-2ba74bd6ffe2/mzaf_16061481957398880364.plus.aac.p.m4a",
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/69/87/7f/69877fbc-cd2c-bb9b-2397-5f3ed14a04a8/Hebe_Little_Happiness_1400.jpg/600x600bb.jpg",
+      "duration": "00:30",
+      "likes": "4.0w",
+      "tags": [
+        "中文热门",
+        "iTunes Preview",
+        "30s试听"
+      ],
+      "source_name": "iTunes Preview",
+      "source_url": "https://music.apple.com/cn/album/%E5%B0%8F%E5%B9%B8%E8%BF%90-%E7%94%B5%E5%BD%B1-%E6%88%91%E7%9A%84%E5%B0%91%E5%A5%B3%E6%97%B6%E4%BB%A3-%E4%B8%BB%E9%A2%98%E6%9B%B2/1017697307?i=1017697311&uo=4",
+      "description": "田馥甄《小幸运 (电影《我的少女时代》主题曲)》的 iTunes 公开试听片段。",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "从第一拍开始，情绪慢慢铺开"
+        },
+        {
+          "time": 6,
+          "text": "街灯和耳机一起亮起来"
+        },
+        {
+          "time": 12,
+          "text": "副歌像一封没有寄出的信"
+        },
+        {
+          "time": 18,
+          "text": "时间往前走，旋律留在原地"
+        },
+        {
+          "time": 24,
+          "text": "下一段生活，继续播放"
+        }
+      ]
+    }
+  ]
+}

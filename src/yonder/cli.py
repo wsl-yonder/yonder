@@ -1,6 +1,7 @@
 import argparse
 import logging
-from datetime import datetime
+import time
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict
 
@@ -20,7 +21,9 @@ from .db import (
     upsert_sources,
 )
 from .digest import CHANNEL_ORDER, build_digest, digest_title, write_preview
+from .github_trending import update_github_cache
 from .processor import process_row
+from .static_export import export_static_site
 from .web import serve_dashboard
 from .wxpusher import send_message
 
@@ -144,12 +147,69 @@ def command_run_once(args) -> None:
         command_digest(args)
 
 
+def command_update_github(args) -> None:
+    payload = update_github_cache(project_root(), limit=args.limit)
+    print(f"Updated GitHub trending: {len(payload.get('items', []))} items")
+    print(f"Fetched at: {payload.get('fetched_at')}")
+
+
+def command_daily_update(args) -> None:
+    settings = load_settings(project_root())
+    sources = load_sources(settings.sources_path)
+    with connect(settings.database_path) as conn:
+        init_db(conn)
+        upsert_sources(conn, sources)
+        items = collect_sources(sources, settings.max_items_per_source)
+        inserted = 0
+        for item in items:
+            if insert_article(conn, item, content_hash(item.title, item.url)):
+                inserted += 1
+        rows = unprocessed_articles(conn, limit=args.limit)
+        for row in rows:
+            insert_processed_item(conn, process_row(row))
+
+    github_payload = update_github_cache(project_root(), limit=args.github_limit)
+    print(f"Collected items: {len(items)}")
+    print(f"New articles: {inserted}")
+    print(f"Processed articles: {len(rows)}")
+    print(f"Updated GitHub trending: {len(github_payload.get('items', []))} items")
+
+
+def _seconds_until_run(hour: int, minute: int) -> float:
+    now = datetime.now()
+    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if target <= now:
+        target += timedelta(days=1)
+    return max((target - now).total_seconds(), 1.0)
+
+
+def command_auto_update(args) -> None:
+    hour, minute = (int(part) for part in args.time.split(":", 1))
+    print(f"Auto update is running. Daily refresh time: {hour:02d}:{minute:02d}")
+    while True:
+        wait_seconds = _seconds_until_run(hour, minute)
+        next_run = datetime.now() + timedelta(seconds=wait_seconds)
+        print(f"Next update: {next_run.strftime('%Y-%m-%d %H:%M:%S')}")
+        time.sleep(wait_seconds)
+        command_daily_update(args)
+
+
 def command_web(args) -> None:
     serve_dashboard(project_root(), host=args.host, port=args.port)
 
 
+def command_export_static(args) -> None:
+    output_dir = Path(args.output)
+    if not output_dir.is_absolute():
+        output_dir = project_root() / output_dir
+    result = export_static_site(project_root(), output_dir=output_dir, clean=not args.no_clean)
+    print(f"Static site exported: {result['output_root']}")
+    print(f"HTML pages: {len(result['pages'])}")
+    print(f"Static assets: {result['static_root']}")
+
+
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="knowledge-radar")
+    parser = argparse.ArgumentParser(prog="yonder")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument("-v", "--verbose", action="store_true")
 
@@ -180,10 +240,30 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--print", action="store_true")
     run_parser.set_defaults(func=command_run_once)
 
-    web_parser = subparsers.add_parser("web", help="Start the local InsightPulse dashboard.")
+    github_parser = subparsers.add_parser("update-github", help="Refresh recent GitHub high-star projects.")
+    github_parser.add_argument("--limit", type=int, default=50)
+    github_parser.set_defaults(func=command_update_github)
+
+    daily_parser = subparsers.add_parser("daily-update", help="Refresh all dashboard data once.")
+    daily_parser.add_argument("--limit", type=int, default=500)
+    daily_parser.add_argument("--github-limit", type=int, default=50)
+    daily_parser.set_defaults(func=command_daily_update)
+
+    auto_parser = subparsers.add_parser("auto-update", help="Run the dashboard refresh every day.")
+    auto_parser.add_argument("--time", default="08:30", help="Local daily refresh time, HH:MM.")
+    auto_parser.add_argument("--limit", type=int, default=500)
+    auto_parser.add_argument("--github-limit", type=int, default=50)
+    auto_parser.set_defaults(func=command_auto_update)
+
+    web_parser = subparsers.add_parser("web", help="Start the local Yonder dashboard.")
     web_parser.add_argument("--host", default="127.0.0.1")
     web_parser.add_argument("--port", type=int, default=8765)
     web_parser.set_defaults(func=command_web)
+
+    export_parser = subparsers.add_parser("export-static", help="Export the dashboard to static HTML files.")
+    export_parser.add_argument("--output", default="dist", help="Output directory for the static site.")
+    export_parser.add_argument("--no-clean", action="store_true", help="Do not delete the output directory first.")
+    export_parser.set_defaults(func=command_export_static)
 
     return parser
 

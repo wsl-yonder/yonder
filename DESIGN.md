@@ -1,18 +1,25 @@
-# 今日宜闻 — 设计文档
+# 今日宜闻 Yonder — 设计文档
 
 ## 1. 项目概述
 
-面向个人和朋友的 AI、科技、金融信息雷达。从 RSS 定时采集信息源，自动去重分类评分，通过本地网页 Dashboard 展示精选内容和日报预览。
+面向个人和朋友的 AI、科技、金融信息雷达。英文项目名为 Yonder，从 RSS 定时采集信息源，自动去重分类评分，通过本地网页 Dashboard 展示精选内容和日报预览。
 
-**当前阶段**：网页 Dashboard 优先。已上线首页、GitHub 页、AI 页三个页面，金融/科技/生活待建设。WxPusher 推送暂退居可选渠道。
+**当前阶段**：网页 Dashboard 优先。已上线首页、GitHub、AI、金融、音乐、小说页面；正在按“静态导出 → GitHub Actions 定时更新 → Cloudflare Pages 部署”三阶段推进公网访问。WxPusher 推送暂退居可选渠道。
 
 **运行方式**：
 
 ```bash
-PYTHONPATH=src python3 -m knowledge_radar.cli init-db
-PYTHONPATH=src python3 -m knowledge_radar.cli run-once --print
-PYTHONPATH=src python3 -m knowledge_radar.cli web
+PYTHONPATH=src python3 -m yonder.cli init-db
+PYTHONPATH=src python3 -m yonder.cli daily-update
+PYTHONPATH=src python3 -m yonder.cli web
 # 打开 http://127.0.0.1:8765
+```
+
+**静态导出**：
+
+```bash
+PYTHONPATH=src python3 -m yonder.cli export-static
+# 输出 dist/，可直接用于 Cloudflare Pages
 ```
 
 ## 2. 关键设计决策
@@ -37,6 +44,18 @@ WxPusher 长内容在微信里需跳转平台查看，阅读体验不好。网�
 
 早期版本用 Pillow 在封面上叠加项目名/排名，结果和 CSS 的叠加层冲突，形成双重黑影。改为纯净背景图后，所有文字由 CSS 负责排版——圆圈编号、标题、简介、日期均在图片下方或覆盖层中。修改文字不需要重新生成图片。
 
+### 2.6 为什么先做静态导出
+
+当前核心需求是每天更新一次 GitHub、AI、金融内容，然后让用户打开网页阅读。静态导出会把 Python 动态渲染结果提前保存成 `dist/**/*.html`，访问时不需要长期运行本地 Python 服务。视觉和交互仍由同一套 HTML/CSS/JS/图片实现，和本地网页保持一致；只有实时写入、登录、动态搜索、在线书源代理等后端能力需要后续用预生成 JSON 或边缘函数补齐。
+
+### 2.7 GitHub Actions 定时更新
+
+第二阶段使用 `.github/workflows/daily-static-export.yml` 在 GitHub 托管环境里自动刷新数据并导出静态站点。触发方式包括手动 `workflow_dispatch` 和每天 00:30 UTC（北京时间 08:30）的定时任务。工作流运行 `daily-update` 与 `export-static`，然后把 `dist/` 上传为 `yonder-dist` artifact。
+
+### 2.8 Cloudflare Pages 部署
+
+第三阶段使用 Cloudflare Pages Direct Upload，而不是 Cloudflare Git 集成。原因是数据刷新和静态导出都由 GitHub Actions 控制，产物 `dist/` 已经是完整可部署站点；Direct Upload 可以让同一个 workflow 完成“刷新数据 → 导出静态页 → 上传 Pages”。部署由官方 `cloudflare/wrangler-action@v3` 执行，目标项目名为 `yonder`，配置保存在 `wrangler.toml`。
+
 ## 3. 页面结构
 
 ### 3.1 首页 `/`
@@ -51,16 +70,16 @@ WxPusher 长内容在微信里需跳转平台查看，阅读体验不好。网�
 ### 3.2 GitHub 页 `/github`
 
 - 科幻风顶部横幅（cyberpunk 城市夜景），高度 21vh，`center 30% / cover`
-- 导航栏 + 右上角 "近 3 个月 · Top 32"
+- 导航栏 + 右上角 "近 3 个月 · Top 50"
 - 标题 "GitHub 乐子雷达"
-- Banner 描述："最近三个月创建、按星数排序的高星项目 Top 32。适合快速扫一眼今天开源圈又在整什么活。" — 说明页面是什么
+- Banner 描述："最近三个月创建、按星数排序的热门项目 Top 50。适合快速扫一眼今天开源圈又在整什么活。" — 说明页面是什么
 - "热门项目"区块：标题 + 描述 — 说明具体内容构成
   - 当前："AI 编码代理 9 个、CLI 工具 4 个、设计系统与知识图谱各 3 个、个人助手与自动化 5 个，另有硬件、游戏等方向。"
-- 32 个项目，4 列卡片网格
+- 50 个项目，4 列卡片网格
 - 响应式断点：>1120px 4 列 → >820px 2 列 → 移动端 1 列
 - 每张卡片：动漫插画封面（16:9，圆角 10px）→ 圆圈编号 → 标题 → 简介（2 行截断）→ 上架日期 + star 数
 - 页脚：诗句 "海阔凭鱼跃，天高任鸟飞。"
-- 数据来源：`src/knowledge_radar/github_demo.py` — 手动维护的 32 个项目
+- 数据来源：GitHub Search API 每日刷新近 3 个月创建仓库，默认展示 Top 50；`src/yonder/github_demo.py` 仅作为接口失败时的兜底数据。
 
 ### 3.3 AI 页 `/ai`
 
@@ -72,7 +91,7 @@ WxPusher 长内容在微信里需跳转平台查看，阅读体验不好。网�
 - 与 GitHub 页同布局：4 列卡片，响应式相同
 - 每张卡片：动漫插画封面 → 右上角分类标签（大模型/开源/AI 应用/研究/政策/硬件）→ 圆圈编号 → 标题 → 简介 → 来源 + 日期
 - 页脚：诗句 "大鹏一日同风起，扶摇直上九万里。"
-- 数据来源：`src/knowledge_radar/ai_news.py` — 手动维护的 32 条周精选 AI 新闻
+- 数据来源：`src/yonder/ai_news.py` — 手动维护的 32 条周精选 AI 新闻
 
 ## 4. 视觉规范
 
@@ -145,13 +164,16 @@ GitHub 项目关键词侧重技术具象（如 "terminal code hacker digital"）
 
 ### 5.3 兜底
 
-- GitHub 页 JPG 缺失时回退到 `anime-thumbs/thumb-XX.svg`（旧版 SVG 生成器）
+- GitHub 页目标状态必须为每个榜单项目准备独立 JPG 封面；Top 50 不允许通过循环复用旧缩略图来补后续卡片。
+- 以后从图库查找或生成任何页面封面时，必须先和已有封面做去重检查，保证新图片和之前使用过的图片不一样。
+- GitHub 页 JPG 缺失时仅允许临时回退到 `anime-thumbs/thumb-XX.svg`（旧版 SVG 生成器）；正式提交前应补齐独立图库图片。
 - AI 页暂无 SVG 兜底（待补齐）
 
 ### 5.4 重新生成
 
 ```bash
 PYTHONPATH=src python3 scripts/generate_covers.py          # GitHub 32 张
+PYTHONPATH=src python3 scripts/generate_github_extra_covers.py --start 33 --end 50
 PYTHONPATH=src python3 scripts/generate_ai_covers.py        # AI 32 张
 PYTHONPATH=src python3 scripts/generate_covers.py --rank 5  # 单张
 ```
@@ -163,20 +185,22 @@ PYTHONPATH=src python3 scripts/generate_covers.py --rank 5  # 单张
 ## 6. 项目结构
 
 ```
-knowledge-radar/
+yonder/
 │
 ├── DESIGN.md                    本文件
 ├── README.md                    项目概述和快速开始
 ├── tasks.md                     任务清单
 ├── decision-log.md              历史决策记录
-├── pyproject.toml               包配置（入口点 knowledge-radar）
+├── pyproject.toml               包配置（入口点 yonder）
+├── wrangler.toml                Cloudflare Pages 部署配置
+├── docs/deployment.md           Cloudflare 部署步骤
 ├── .env / .env.example          运行配置
 ├── .gitignore
 │
 ├── config/
 │   └── sources.json             RSS 信息源（11 个，AI/金融/科技三个频道）
 │
-├── src/knowledge_radar/         主包
+├── src/yonder/                 主包
 │   ├── cli.py                   命令行入口（init-db / collect / process / digest / web 等 8 个子命令）
 │   ├── config.py                配置加载（.env + sources.json）
 │   ├── models.py                数据模型（Source, FeedItem, ProcessedItem）
@@ -192,6 +216,7 @@ knowledge-radar/
 │
 ├── scripts/
 │   ├── generate_covers.py       GitHub 封面生成（Pixabay → JPG）
+│   ├── generate_github_extra_covers.py  GitHub Top 33-50 独立封面补图
 │   ├── generate_ai_covers.py    AI 封面生成
 │   └── generate_project_thumbs.py  SVG 封面生成（兜底）
 │
@@ -199,7 +224,7 @@ knowledge-radar/
 │   ├── scene/pastoral-4k.png    首页草坪背景
 │   ├── github/                  GitHub 页面资产
 │   │   ├── banner.jpg
-│   │   ├── covers/cover-01..32.jpg
+│   │   ├── covers/cover-01..50.jpg
 │   │   └── pool/                Pixabay 缓存（gitignore）
 │   ├── ai/                      AI 页面资产
 │   │   ├── banner.jpg

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <rect width="960" height="960" fill="#ecfeff"/>
+  <circle cx="740" cy="180" r="210" fill="#facc15" opacity=".22"/>
+  <circle cx="260" cy="660" r="290" fill="#22c55e" opacity=".16"/>
+  <path d="M130 580c130-180 250 78 380-74s224 7 320-132" fill="none" stroke="#176d81" stroke-width="26" stroke-linecap="round"/>
+  <path d="M150 660c178-102 310-54 512-120" fill="none" stroke="#4fbd82" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+  <text x="86" y="134" fill="#14313b" font-family="Arial, sans-serif" font-size="54" font-weight="800">晨雾里的信号</text>
+</svg>

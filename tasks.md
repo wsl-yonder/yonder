@@ -1,4 +1,4 @@
-# Knowledge Radar Tasks
+# Yonder Tasks
 
 ## Phase 1: 网页 Dashboard MVP
 
@@ -70,6 +70,7 @@
 - [ ] 收藏、隐藏、已读。
 - [ ] 内容源管理。
 - [ ] 分享链接。
+- [x] 第三阶段接入 Cloudflare Pages Direct Upload 部署配置。
 
 ## Open Questions
 

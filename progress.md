@@ -1,0 +1,72 @@
+# Progress
+
+## 2026-05-10
+
+- Checkpoint: GitHub 页面已完成站内浏览模式，包含左侧固定按钮、32 项目滚动目录、GitHub 禁止 iframe 时的站内项目档案。
+- Validation: 已运行 `python3 -m compileall src/yonder`，并通过 `curl http://127.0.0.1:8765/github` 确认页面包含 `project-profile` 和 32 个项目导航项。
+- Checkpoint: AI 页面已完成列表态 + 站内详情浏览态，复用 `AI_ARTICLES` 的 32 条内容与 AI 封面图。
+- Validation: 已运行 `python3 -m compileall src/yonder`；已用 `PYTHONPATH=src python3` 确认 AI 页包含 `reader-browser`、32 个导航项、32 张卡片和内联数据；已用 Node 解析 1 个内联脚本。
+- Error Log: 第一次 AI 页面渲染验证忘记设置 `PYTHONPATH=src`，出现 `ModuleNotFoundError: No module named 'yonder'`；已用正确环境重跑通过。
+- Checkpoint: 金融页面已完成列表态 + 站内详情浏览态，使用本地 SQLite 的 finance RSS 数据生成 20 条内容，并加入 `/finance` 路由。
+- Validation: 已运行 `python3 -m compileall src/yonder`；已用 `PYTHONPATH=src python3` 确认金融页包含 `reader-browser`、20 个导航项、20 张卡片和标题；已用 Node 解析 1 个内联脚本。
+- Error Log: 第一次金融验证调用 `load_settings()` 时没有传 `project_root`，出现 `TypeError: load_settings() missing 1 required positional argument: 'project_root'`；已改成 `load_settings(Path("."))` 后通过。
+- Checkpoint: 科技页面已完成列表态 + 站内详情浏览态，使用本地 SQLite 的 tech RSS 数据生成 20 条内容，并加入 `/tech` 路由。
+- Validation: 已运行 `python3 -m compileall src/yonder`；已用 `PYTHONPATH=src python3` 确认科技页包含 `reader-browser`、20 个导航项、20 张卡片和标题；已用 Node 解析 1 个内联脚本。
+- Checkpoint: 生活页面已完成列表态 + 站内详情浏览态，使用静态精选 demo 数据生成 12 条生活灵感内容，并加入 `/life` 路由。
+- Validation: 已运行 `python3 -m compileall src/yonder`；已用 `PYTHONPATH=src python3` 确认生活页包含 `reader-browser`、12 个导航项、12 张卡片和标题；已用 Node 解析 1 个内联脚本。
+- Checkpoint: 首页和 GitHub 页导航已改为可点击的 AI、金融、科技、生活链接；本地 8765 服务已重启。
+- Validation: 已通过 `curl` 检查 `/ai`、`/finance`、`/tech`、`/life` 均包含 `reader-browser`；导航项数量分别为 32、20、20、12。
+- Error Log: 第一次整体路由检查使用 `path` 作为 zsh 循环变量，影响命令搜索路径导致 `curl`/`rg` 报 `command not found`；已改用 `route` 变量重跑通过。
+- Next: 可继续为金融、科技、生活补专属封面图和真实生活频道数据源。
+- Checkpoint: 按用户反馈调整 AI 页说明文案，让“本周 AI”下方描述 Top 32 的实际内容主题，而不是泛化交互说明。
+- Checkpoint: 金融页从本地英文 RSS/监管公告改为中文 A股/美股市场快讯，共 10 条，日期精确显示到 2026-05-08 至 2026-05-10；周末无正常交易，保留最近交易日和周末消息面。
+- Checkpoint: 金融页封面改为金融专属 SVG 图表封面，不再复用 GitHub/AI 图片。
+- Checkpoint: 科技页和生活页按用户要求先删除，首页、GitHub 页和共享频道导航均移除 `/tech`、`/life`，对应路由返回 404。
+- Validation: 已运行 `python3 -m compileall src/yonder`；已确认 AI 描述包含 `Mythos 安全限制`；金融页包含 10 个导航项、10 张卡片、金融 SVG 封面和 `A股 · 美股快讯`；Node 已解析 AI/金融各 1 个内联脚本。
+- Validation: 重启本地 8765 服务后，`/ai` 与 `/finance` 返回 `reader-browser`；`/tech` 与 `/life` 返回 404；首页只保留 `/finance` 新频道入口。
+- Checkpoint: 音乐页已新增 `/music`，使用本地 `static/music/playlist.json` 管理歌单，当前包含 3 首可播放 WAV demo；页面先展示歌单，点击歌曲进入播放器态，左侧固定上一首、下一首、返回歌单按钮和可滚动曲目目录。
+- Checkpoint: 首页、GitHub 页与共享频道导航已加入“音乐”入口；音乐页沿用当前二次元科技博客背景和频道导航。
+- Validation: 已运行 `python3 -m compileall src/yonder`；`playlist.json` 通过 `python3 -m json.tool`；`render_music_page()` 输出包含 `音乐小站`、`player-shell`、3 个音乐卡片、3 个曲目导航和 `<audio>`；Node 已解析音乐页 1 个内联脚本。
+- Validation: 已重启本地 8765 服务；`/music` 返回播放器页面，首页包含 `/music` 入口，`/static/music/tracks/morning-signal.wav` 返回 `200 audio/x-wav`。
+- Checkpoint: 音乐页按网易云参考图重做：歌单态从大卡片改为一行一行的紧凑列表；点击歌曲后切换黑色播放器态，左侧为旋转唱片封面，右侧为动态歌词，底部为播放控制条。
+- Checkpoint: 歌单音频从本地 WAV demo 换成 3 首 Wikimedia Commons 外部公开 MP3，并为每首歌补充专辑、来源链接、喜欢数和时间轴歌词；播放器 CSS/JS 拆到 `static/music/player.css` 与 `static/music/player.js`。
+- Validation: 已运行 `python3 -m compileall src/yonder`、`python3 -m json.tool static/music/playlist.json`、`node --check static/music/player.js`；三首外部 MP3 均返回 `200 audio/mpeg` 且带 `access-control-allow-origin: *`；重启 8765 后 `/music` 包含 `playlist-table`、3 个 `song-row`、`data-record`、`data-lyric-list`，CSS/JS 静态文件返回 200。
+- Checkpoint: 音乐歌单改为 20 首热门中文歌曲试听源，使用 iTunes Search API 返回的公开 30 秒 `previewUrl`；歌单名称改为“今日宜闻 · 中文热歌试听榜”，并补充 iTunes 来源说明。
+- Checkpoint: 播放器从黑色主题改为更贴合背景的白色主题；左上角只保留两个窗口按钮：红色关闭会停止播放并回到歌单，黄色缩小会继续播放并在歌单区域上方显示迷你播放状态。
+- Validation: 已运行 `python3 -m compileall src/yonder`、`python3 -m json.tool static/music/playlist.json`、`node --check static/music/player.js`；确认页面输出 20 个 `song-row`、20 个 iTunes 音频链接、`data-mini-status`、`data-close-player` 与 `data-minimize-player`；抽查第 1/11/20 首试听源均返回 `200 audio/x-m4p` 且带 `access-control-allow-origin: *`；重启 8765 后 `/music` 与 CSS/JS 静态文件返回正常。
+- Checkpoint: 在音乐页“今日宜闻 · 中文热歌试听榜”板块下方新增网易云音乐网页版入口，提供跳转 `https://music.163.com/` 的按钮，并说明扫码登录和完整播放在网易云官网完成，不做 iframe 嵌入。
+- Validation: 已运行 `python3 -m compileall src/yonder`、`node --check static/music/player.js`；确认 `netease-entry` 位于 `playlist-head` 后、`playlist-table` 前，页面仍输出 20 个 `song-row`；重启 8765 后 `/music` 包含网易云入口和官网链接，CSS 返回 200。
+- Checkpoint: 新增小说频道 `/novels`，首页、GitHub 顶部导航与共享频道导航均加入“小说”入口；页面采用本地单页应用，包含书库、详情和阅读模式三种状态。
+- Checkpoint: 小说 demo 当前内置 12 本男频/女频小说，覆盖玄幻、网游、都市、言情、古言、科幻、悬疑、仙侠、体育等分类；支持搜索、男频/女频筛选、分类筛选、按更新时间/热度/字数/书名排序。
+- Checkpoint: 详情页展示封面、作者、简介、标签、章节目录和“开始阅读/继续上次阅读”；阅读模式支持上一章、下一章、返回目录、纸张/护眼/夜间主题、字号调整、左右方向键翻章，并用 localStorage 保存阅读进度和阅读器设置。
+- Validation: 已运行 `python3 -m compileall src/yonder`、`node --check static/novels/novels.js`；确认 `/novels` 输出 `data-search`、详情视图、阅读视图和小说 CSS/JS；重启 8765 后 `/novels`、`/static/novels/novels.css`、`/static/novels/novels.js` 均返回正常，首页包含 `/novels` 入口。
+- Checkpoint: 按用户反馈调整小说页布局：移除左侧筛选栏，搜索栏移动到“今日书单”上方，频道/分类/排序改为书单标题下方的一行筛选；点击书籍时详情页作为独立视图替换书库，不再出现在今日书单下方。
+- Validation: 已运行 `python3 -m compileall src/yonder`、`node --check static/novels/novels.js`；确认页面没有 `filter-panel`，`data-search` 位于“今日书单”之前，`filter-row` 存在；重启 8765 后 `/novels` 输出新结构且 CSS 返回 200。
+- Checkpoint: 进一步明确小说页互斥视图行为：点击书单中的小说后只显示详情视图并滚到主内容顶部；阅读模式工具栏同时提供“返回书库”和“返回目录”，返回书库时才重新显示搜索栏和今日书单。
+- Validation: 已运行 `python3 -m compileall src/yonder`、`node --check static/novels/novels.js`；确认 `data-view` 三个视图独立存在，阅读脚本包含 2 个“返回书库”和 1 个“返回目录”；重启 8765 后 `/novels` 和小说 JS 返回 200。
+- Fix: 发现 `.library-view { display: block; }` 覆盖了浏览器默认 `[hidden]` 样式，导致点击小说后书库没有真正隐藏；已新增 `.library-view[hidden]/.detail-view[hidden]/.reader-view[hidden] { display: none !important; }`，并给小说 CSS 链接加 `?v=2` 避免浏览器缓存旧样式。
+- Validation: 已运行 `python3 -m compileall src/yonder`；重启 8765 后 `/novels` 使用 `novels.css?v=2`，CSS 中包含 `library-view[hidden]` 和 `display: none !important`。
+- Checkpoint: 小说页新增书源切换层，支持“本地 Demo 书库”和“Project Gutenberg 中文公版书”两个来源；后端新增 `/api/novels/gutenberg` 与 `/api/novels/gutenberg/{id}` 代理，前者读取 Gutendex 中文公版书元数据，后者按需读取 Gutenberg 纯文本并切分章节。
+- Checkpoint: 前端书源切换接入 `source-panel`，公版书点击详情时先显示加载态，再进入原有详情/目录/阅读器流程；保留互斥视图、返回书库、返回目录、主题和字号功能。小说 CSS/JS 链接升级为 `novels.css?v=3` 与 `novels.js?v=2` 避免缓存。
+- Validation: 已运行 `python3 -m compileall src/yonder`、`node --check static/novels/novels.js`；本地函数验证 Gutendex 返回 32 本中文公版书，`gutenberg_book_detail_payload('23962')` 可读取《西游记》并切出 12 章；重启 8765 后 `/api/novels/gutenberg` 返回 JSON，`/api/novels/gutenberg/23962` 返回《西游记》章节，`/novels` 包含公版书源按钮和新版 CSS/JS。
+- Checkpoint: 数据更新链路升级为每日自动刷新：新增 `daily-update` 和 `auto-update --time HH:MM` 命令，`daily-update` 会采集国内 AI/金融来源、处理 SQLite，并更新 GitHub 近 3 个月高星项目缓存。
+- Checkpoint: GitHub 页面改为优先读取 `data/github_trending.json`，缓存过期会调用 GitHub Search API；AI 页面优先读取量子位 RSS + 36氪 AI 的入库数据；金融页面优先读取新浪财经滚动的入库数据。
+- Validation: 已运行 `PYTHONPATH=src python3 -m compileall src/yonder`；已运行 `PYTHONPATH=src python3 -m yonder.cli daily-update --github-limit 20`，采集 50 条、入库 50 条、处理 50 条，并更新 20 个 GitHub 项目；本地渲染确认 `/github`、`/ai`、`/finance` 均输出自动更新后的内容。
+- Checkpoint: 修正 GitHub、AI、金融三页的信息密度：频道标题下方的说明改为描述当前这一批内容，宽度控制在主内容约 2/3；卡片标题强制单行省略，卡片简介强制两行以内；动态抓取内容不再直接展示英文原始简介。
+- Validation: 已运行 `PYTHONPATH=src python3 -m compileall src/yonder`、`PYTHONPATH=src python3 -m yonder.cli update-github --limit 20`；重启 8765 后用 `curl` 验证 `/github` 输出中文项目简介、`/ai` 输出“本批 AI 内容”和中文短评、`/finance` 输出“本批金融内容”和中文短评。
+- Fix: 按用户反馈再次收紧文案：GitHub 卡片标题恢复为仓库原名，不再拼接“高星项目”；卡片简介改为基于仓库原始 description 的中文整理；“热门项目”下说明压成半宽单行，AI/金融说明同样缩短为半宽单行。
+- Validation: 已运行 `PYTHONPATH=src python3 -m compileall src/yonder`、`PYTHONPATH=src python3 -m yonder.cli update-github --limit 20`；重启 8765 后确认 `/github` 不再出现“高星项目”“原仓库简介聚焦”等错误文案，AI/金融顶部说明保持短句。
+- Fix: 取消 GitHub/AI/金融标题下说明的半宽省略，桌面端改为占用剩余可用空间并保持单行；AI/金融卡片简介改为来源摘要本身，去掉“国内 AI 动态，重点看…”和“市场快讯，重点看…”模板句。
+- Validation: 已运行 `PYTHONPATH=src python3 -m compileall src/yonder`；重启 8765 后用 `curl` 确认 `/ai`、`/finance` 卡片简介已展示原始标题/摘要内容，顶部说明不再使用 `max-width: 50%` 和省略规则。
+- Change: GitHub 页面榜单规模从 Top 20 调整为 Top 50；`update-github`、`daily-update --github-limit`、`auto-update --github-limit` 默认值同步改为 50，并写入 `DESIGN.md`。
+- Change: GitHub 第 33-50 位封面已从 Pixabay 图库单独补齐为 `cover-33.jpg` 到 `cover-50.jpg`，不再依赖循环复用 `anime-thumbs` 兜底；新增 `scripts/generate_github_extra_covers.py`，生成时对已有封面做 MD5 去重。
+- Validation: 已确认 `static/assets/github/covers` 下共有 50 张 JPG，`cover-33..50` 全部存在且 MD5 无重复；`/github` 页面已引用 `cover-33.jpg` 与 `cover-50.jpg`。
+- Checkpoint: 第一阶段静态导出完成。新增 `PYTHONPATH=src python3 -m yonder.cli export-static`，会生成 `dist/`，包含首页、GitHub、AI、金融、音乐、小说、scene/background 页面和完整 `/static` 资源。
+- Validation: 已运行 `PYTHONPATH=src python3 -m compileall src/yonder` 与 `PYTHONPATH=src python3 -m yonder.cli export-static`；用 `python3 -m http.server 8766 --directory dist` 模拟静态托管，确认首页、GitHub Top 50 和 `cover-50.jpg` 静态资源可访问。
+- Checkpoint: 第二阶段 GitHub Actions 定时更新已配置。新增 `.github/workflows/daily-static-export.yml`，支持手动触发和每天北京时间 08:30 定时运行，自动执行 `daily-update`、`export-static`，并上传 `yonder-dist` artifact。
+- Validation: 已在本地模拟 Actions 命令链：`compileall`、`daily-update`、`export-static --output /private/tmp/yonder-actions-check` 均成功；确认导出目录包含首页、GitHub、AI、金融和 `cover-50.jpg`。
+- Change: 项目英文名确定为 Yonder，中文展示名继续使用“今日宜闻”；工程目录、包元数据、CLI 程序名、工作流名称和文档中的项目称呼同步改名。
+- Change: 内部 Python 包名正式改为 `yonder`，主包目录变为 `src/yonder`，默认数据库文件变为 `data/yonder.sqlite3`，README、DESIGN、脚本和 GitHub Actions 命令同步使用 `python -m yonder.cli`。
+- Validation: 已运行 `PYTHONPATH=src python3 -m compileall src/yonder`、`PYTHONPATH=src python3 -m yonder.cli --version`、`PYTHONPATH=src python3 -m yonder.cli export-static`；已重启 8765 服务并验证首页、GitHub、AI 页面返回正常。
+- Checkpoint: 第三阶段 Cloudflare Pages 部署配置完成。新增 `wrangler.toml` 与 `docs/deployment.md`，GitHub Actions 在导出 `dist/` 并上传 `yonder-dist` artifact 后，会通过 `cloudflare/wrangler-action@v3` 执行 `pages deploy dist --project-name=yonder`。
+- Next: 需要在 GitHub 仓库 Actions Secrets 中填入 `CLOUDFLARE_API_TOKEN` 与 `CLOUDFLARE_ACCOUNT_ID`，然后手动运行一次 workflow 验证线上地址。

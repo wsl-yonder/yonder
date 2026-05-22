@@ -10,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from knowledge_radar.github_demo import GITHUB_PROJECTS  # noqa: E402
+from yonder.github_demo import GITHUB_PROJECTS  # noqa: E402
 
 
 OUT_DIR = ROOT / "static" / "assets" / "anime-thumbs"

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <rect width="960" height="960" fill="#102d36"/>
+  <circle cx="706" cy="222" r="198" fill="#60a5fa" opacity=".28"/>
+  <circle cx="222" cy="750" r="250" fill="#4fbd82" opacity=".16"/>
+  <rect x="154" y="298" width="652" height="380" rx="34" fill="#f8ffff" opacity=".9"/>
+  <path d="M244 442h186M244 510h320M244 578h242" stroke="#176d81" stroke-width="24" stroke-linecap="round"/>
+  <path d="M620 432l70 70-70 70" fill="none" stroke="#4fbd82" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="86" y="132" fill="#eafff6" font-family="Arial, sans-serif" font-size="54" font-weight="800">半夜写代码</text>
+</svg>

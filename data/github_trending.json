@@ -1,0 +1,740 @@
+{
+  "fetched_at": "2026-05-22 22:53",
+  "window": "近 3 个月创建 · stars 排序",
+  "items": [
+    {
+      "rank": 1,
+      "name": "claw-code",
+      "repo": "ultraworkers/claw-code",
+      "stars": 192230,
+      "tech": [
+        "Rust"
+      ],
+      "summary": "围绕 Codex 风格开发体验的 Rust 工具项目，主打高速迭代和命令行工程工作流。",
+      "detail": "ultraworkers/claw-code 创建于 2026-03-31，当前约 192,230 stars、109,961 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/ultraworkers/claw-code",
+      "created_at": "2026-03-31"
+    },
+    {
+      "rank": 2,
+      "name": "gstack",
+      "repo": "garrytan/gstack",
+      "stars": 100768,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "复刻 Claude Code 工作台配置，把多种工程角色和工具组织成可复用流程。",
+      "detail": "garrytan/gstack 创建于 2026-03-11，当前约 100,768 stars、15,010 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/garrytan/gstack",
+      "created_at": "2026-03-11"
+    },
+    {
+      "rank": 3,
+      "name": "autoresearch",
+      "repo": "karpathy/autoresearch",
+      "stars": 82731,
+      "tech": [
+        "Python"
+      ],
+      "summary": "让 AI 代理自动运行研究实验，围绕单 GPU nanochat 训练做自动化探索。",
+      "detail": "karpathy/autoresearch 创建于 2026-03-06，当前约 82,731 stars、12,005 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/karpathy/autoresearch",
+      "created_at": "2026-03-06"
+    },
+    {
+      "rank": 4,
+      "name": "awesome-design-md",
+      "repo": "VoltAgent/awesome-design-md",
+      "stars": 82608,
+      "tech": [
+        "awesome-list",
+        "design-md",
+        "design-system",
+        "design-tokens"
+      ],
+      "summary": "收集不同品牌风格的 DESIGN.md 文件，帮助编码代理生成更贴近设计系统的界面。",
+      "detail": "VoltAgent/awesome-design-md 创建于 2026-03-31，当前约 82,608 stars、9,944 forks。技术标签：awesome-list、design-md、design-system、design-tokens、figma、google-stitch。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "created_at": "2026-03-31"
+    },
+    {
+      "rank": 5,
+      "name": "paperclip",
+      "repo": "paperclipai/paperclip",
+      "stars": 67091,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "用于管理工作场景中 AI 代理的开源应用，把代理协作放进统一工作台。",
+      "detail": "paperclipai/paperclip 创建于 2026-03-02，当前约 67,091 stars、12,306 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/paperclipai/paperclip",
+      "created_at": "2026-03-02"
+    },
+    {
+      "rank": 6,
+      "name": "caveman",
+      "repo": "JuliusBrussee/caveman",
+      "stars": 63603,
+      "tech": [
+        "JavaScript",
+        "ai",
+        "anthropic",
+        "caveman"
+      ],
+      "summary": "通过极简表达压缩对话 token，用更短文本保留工程协作信息。",
+      "detail": "JuliusBrussee/caveman 创建于 2026-04-04，当前约 63,603 stars、3,572 forks。技术标签：ai、anthropic、caveman、claude、claude-code、llm。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "created_at": "2026-04-04"
+    },
+    {
+      "rank": 7,
+      "name": "mempalace",
+      "repo": "MemPalace/mempalace",
+      "stars": 52653,
+      "tech": [
+        "Python",
+        "ai",
+        "chromadb",
+        "llm"
+      ],
+      "summary": "面向 AI 长期记忆的开源系统，关注记忆存储、检索和上下文注入。",
+      "detail": "MemPalace/mempalace 创建于 2026-04-05，当前约 52,653 stars、6,947 forks。技术标签：ai、chromadb、llm、mcp、memory、python。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/MemPalace/mempalace",
+      "created_at": "2026-04-05"
+    },
+    {
+      "rank": 8,
+      "name": "graphify",
+      "repo": "safishamsi/graphify",
+      "stars": 51388,
+      "tech": [
+        "Python",
+        "antigravity",
+        "claude-code",
+        "codex"
+      ],
+      "summary": "把代码、文档和多模态资料转成可查询知识图谱，方便理解大型项目。",
+      "detail": "safishamsi/graphify 创建于 2026-04-03，当前约 51,388 stars、5,520 forks。技术标签：antigravity、claude-code、codex、gemini、graphrag、knowledge-graph。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/safishamsi/graphify",
+      "created_at": "2026-04-03"
+    },
+    {
+      "rank": 9,
+      "name": "open-design",
+      "repo": "nexu-io/open-design",
+      "stars": 49561,
+      "tech": [
+        "TypeScript",
+        "agent-skills",
+        "ai-agents",
+        "ai-design"
+      ],
+      "summary": "本地优先的开源设计工具，面向 AI 设计工作流和自带密钥使用场景。",
+      "detail": "nexu-io/open-design 创建于 2026-04-28，当前约 49,561 stars、5,631 forks。技术标签：agent-skills、ai-agents、ai-design、byok、claude、claude-code-for-design。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/nexu-io/open-design",
+      "created_at": "2026-04-28"
+    },
+    {
+      "rank": 10,
+      "name": "pretext",
+      "repo": "chenglou/pretext",
+      "stars": 47356,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "面向文本测量与排版的工具，适合复杂编辑器、创意排版和可视化界面。",
+      "detail": "chenglou/pretext 创建于 2026-03-07，当前约 47,356 stars、2,618 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/chenglou/pretext",
+      "created_at": "2026-03-07"
+    },
+    {
+      "rank": 11,
+      "name": "career-ops",
+      "repo": "santifer/career-ops",
+      "stars": 46638,
+      "tech": [
+        "JavaScript",
+        "ai-agent",
+        "anthropic",
+        "automation"
+      ],
+      "summary": "把求职流程做成可运营系统，覆盖岗位追踪、材料生成和进度管理。",
+      "detail": "santifer/career-ops 创建于 2026-04-04，当前约 46,638 stars、9,750 forks。技术标签：ai-agent、anthropic、automation、career、claude、claude-code。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/santifer/career-ops",
+      "created_at": "2026-04-04"
+    },
+    {
+      "rank": 12,
+      "name": "CLI-Anything",
+      "repo": "HKUDS/CLI-Anything",
+      "stars": 39484,
+      "tech": [
+        "Python"
+      ],
+      "summary": "把任意任务包装成命令行能力，让工具和 AI 代理更容易调用。",
+      "detail": "HKUDS/CLI-Anything 创建于 2026-03-08，当前约 39,484 stars、3,731 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "created_at": "2026-03-08"
+    },
+    {
+      "rank": 13,
+      "name": "openclaude",
+      "repo": "Gitlawb/openclaude",
+      "stars": 27464,
+      "tech": [
+        "TypeScript",
+        "ai",
+        "ai-agent",
+        "ai-tools"
+      ],
+      "summary": "一个可在多环境运行的 Claude/AI 工具入口，强调灵活接入不同能力。",
+      "detail": "Gitlawb/openclaude 创建于 2026-04-01，当前约 27,464 stars、8,554 forks。技术标签：ai、ai-agent、ai-tools、cli、coding。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/Gitlawb/openclaude",
+      "created_at": "2026-04-01"
+    },
+    {
+      "rank": 14,
+      "name": "financial-services",
+      "repo": "anthropics/financial-services",
+      "stars": 26661,
+      "tech": [
+        "Python"
+      ],
+      "summary": "面向金融服务场景的 Python 工具项目，聚焦行业数据和工作流示例。",
+      "detail": "anthropics/financial-services 创建于 2026-02-23，当前约 26,661 stars、3,724 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/anthropics/financial-services",
+      "created_at": "2026-02-23"
+    },
+    {
+      "rank": 15,
+      "name": "cli",
+      "repo": "googleworkspace/cli",
+      "stars": 26495,
+      "tech": [
+        "Rust",
+        "agent-skills",
+        "ai-agent",
+        "automation"
+      ],
+      "summary": "Google Workspace 命令行工具，覆盖 Drive、Gmail、Calendar、Sheets、Docs 等服务。",
+      "detail": "googleworkspace/cli 创建于 2026-03-02，当前约 26,495 stars、1,384 forks。技术标签：agent-skills、ai-agent、automation、cli、discovery-api、gemini-cli-extension。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/googleworkspace/cli",
+      "created_at": "2026-03-02"
+    },
+    {
+      "rank": 16,
+      "name": "symphony",
+      "repo": "openai/symphony",
+      "stars": 24427,
+      "tech": [
+        "Elixir"
+      ],
+      "summary": "面向编码代理的工程工具，帮助团队管理自动化实现过程。",
+      "detail": "openai/symphony 创建于 2026-02-26，当前约 24,427 stars、2,405 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/openai/symphony",
+      "created_at": "2026-02-26"
+    },
+    {
+      "rank": 17,
+      "name": "OpenCLI",
+      "repo": "jackwener/OpenCLI",
+      "stars": 22311,
+      "tech": [
+        "JavaScript",
+        "ai-agent",
+        "ai-agents",
+        "ai-tools"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Make、Any、Website 展开，具体功能以 README 为准。",
+      "detail": "jackwener/OpenCLI 创建于 2026-03-14，当前约 22,311 stars、2,243 forks。技术标签：ai-agent、ai-agents、ai-tools、cli。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/jackwener/OpenCLI",
+      "created_at": "2026-03-14"
+    },
+    {
+      "rank": 18,
+      "name": "nuwa-skill",
+      "repo": "alchaincyf/nuwa-skill",
+      "stars": 20780,
+      "tech": [
+        "Python"
+      ],
+      "summary": "你想蒸馏的下一个员工，何必是同事。蒸馏任何人的思维方式——心智模型、决策启发式、表达DNA。Distill how anyone thinks.",
+      "detail": "alchaincyf/nuwa-skill 创建于 2026-04-05，当前约 20,780 stars、3,174 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/alchaincyf/nuwa-skill",
+      "created_at": "2026-04-05"
+    },
+    {
+      "rank": 19,
+      "name": "NemoClaw",
+      "repo": "NVIDIA/NemoClaw",
+      "stars": 20594,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "在 NVIDIA OpenShell 中更安全地运行 OpenClaw，并接入托管推理能力。",
+      "detail": "NVIDIA/NemoClaw 创建于 2026-03-15，当前约 20,594 stars、2,712 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/NVIDIA/NemoClaw",
+      "created_at": "2026-03-15"
+    },
+    {
+      "rank": 20,
+      "name": "PLFM_RADAR",
+      "repo": "NawfalMotii79/PLFM_RADAR",
+      "stars": 20452,
+      "tech": [
+        "PLSQL"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Open、source、low 展开，具体功能以 README 为准。",
+      "detail": "NawfalMotii79/PLFM_RADAR 创建于 2026-03-08，当前约 20,452 stars、4,864 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+      "created_at": "2026-03-08"
+    },
+    {
+      "rank": 21,
+      "name": "hyperframes",
+      "repo": "heygen-com/hyperframes",
+      "stars": 20431,
+      "tech": [
+        "TypeScript",
+        "ai",
+        "animation",
+        "ffmpeg"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Write、HTML、Render 展开，具体功能以 README 为准。",
+      "detail": "heygen-com/hyperframes 创建于 2026-03-10，当前约 20,431 stars、1,913 forks。技术标签：ai、animation、ffmpeg、framework、gsap、html。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "created_at": "2026-03-10"
+    },
+    {
+      "rank": 22,
+      "name": "Agent-Reach",
+      "repo": "Panniantong/Agent-Reach",
+      "stars": 20092,
+      "tech": [
+        "Python",
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Give、your、agent 展开，具体功能以 README 为准。",
+      "detail": "Panniantong/Agent-Reach 创建于 2026-02-24，当前约 20,092 stars、1,778 forks。技术标签：agent-infrastructure、ai-agent、ai-search、automation、bilibili、claude-code。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "created_at": "2026-02-24"
+    },
+    {
+      "rank": 23,
+      "name": "codex-plugin-cc",
+      "repo": "openai/codex-plugin-cc",
+      "stars": 19408,
+      "tech": [
+        "JavaScript"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Use、Codex、Claude 展开，具体功能以 README 为准。",
+      "detail": "openai/codex-plugin-cc 创建于 2026-03-30，当前约 19,408 stars、1,155 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "created_at": "2026-03-30"
+    },
+    {
+      "rank": 24,
+      "name": "academic-research-skills",
+      "repo": "Imbad0202/academic-research-skills",
+      "stars": 18876,
+      "tech": [
+        "Python",
+        "academic-pipeline",
+        "academic-writing",
+        "ai-research"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Academic、Research、Skills 展开，具体功能以 README 为准。",
+      "detail": "Imbad0202/academic-research-skills 创建于 2026-02-26，当前约 18,876 stars、1,620 forks。技术标签：academic-pipeline、academic-writing、ai-research、claude、claude-code、literature-review。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "created_at": "2026-02-26"
+    },
+    {
+      "rank": 25,
+      "name": "claude-code",
+      "repo": "claude-code-best/claude-code",
+      "stars": 18700,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "原汁原昧 Claude Code 可运行,可构建, 可调试版; 生产级工程化, 企业级可靠性; 安全无毒, 内存泄露修复",
+      "detail": "claude-code-best/claude-code 创建于 2026-03-31，当前约 18,700 stars、15,908 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/claude-code-best/claude-code",
+      "created_at": "2026-03-31"
+    },
+    {
+      "rank": 26,
+      "name": "CloakBrowser",
+      "repo": "CloakHQ/CloakBrowser",
+      "stars": 18583,
+      "tech": [
+        "Python",
+        "ai-agents",
+        "anti-detect",
+        "antidetect-browser"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Stealth、Chromium、passes 展开，具体功能以 README 为准。",
+      "detail": "CloakHQ/CloakBrowser 创建于 2026-02-22，当前约 18,583 stars、1,473 forks。技术标签：ai-agents、anti-detect、antidetect-browser、bot-detection、browser-automation、captcha-bypass。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/CloakHQ/CloakBrowser",
+      "created_at": "2026-02-22"
+    },
+    {
+      "rank": 27,
+      "name": "colleague-skill",
+      "repo": "titanwings/colleague-skill",
+      "stars": 18361,
+      "tech": [
+        "Python"
+      ],
+      "summary": "将冰冷的离别化为温暖的 Skill，欢迎加入数字生命1.0！Transforming cold farewells into warm skills? It's giving rebirth era. Welcome to Digital Life 1.0. 🫶",
+      "detail": "titanwings/colleague-skill 创建于 2026-03-30，当前约 18,361 stars、1,837 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/titanwings/colleague-skill",
+      "created_at": "2026-03-30"
+    },
+    {
+      "rank": 28,
+      "name": "gbrain",
+      "repo": "garrytan/gbrain",
+      "stars": 18133,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Garrys、Opinionated、OpenClaw 展开，具体功能以 README 为准。",
+      "detail": "garrytan/gbrain 创建于 2026-04-05，当前约 18,133 stars、2,527 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/garrytan/gbrain",
+      "created_at": "2026-04-05"
+    },
+    {
+      "rank": 29,
+      "name": "OpenMAIC",
+      "repo": "THU-MAIC/OpenMAIC",
+      "stars": 17814,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Open、Multi、Agent 展开，具体功能以 README 为准。",
+      "detail": "THU-MAIC/OpenMAIC 创建于 2026-03-11，当前约 17,814 stars、3,459 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "created_at": "2026-03-11"
+    },
+    {
+      "rank": 30,
+      "name": "Understand-Anything",
+      "repo": "Lum1104/Understand-Anything",
+      "stars": 17705,
+      "tech": [
+        "TypeScript",
+        "antigravity-skills",
+        "business-knowledge",
+        "claude-code"
+      ],
+      "summary": "把代码、文档和多模态资料转成可查询知识图谱，方便理解大型项目。",
+      "detail": "Lum1104/Understand-Anything 创建于 2026-03-15，当前约 17,705 stars、1,617 forks。技术标签：antigravity-skills、business-knowledge、claude-code、claude-skills、codebase-analysis、codex。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/Lum1104/Understand-Anything",
+      "created_at": "2026-03-15"
+    },
+    {
+      "rank": 31,
+      "name": "openfang",
+      "repo": "RightNow-AI/openfang",
+      "stars": 17617,
+      "tech": [
+        "Rust",
+        "agent-framework",
+        "ai-agents",
+        "llm"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Open、source、Agent 展开，具体功能以 README 为准。",
+      "detail": "RightNow-AI/openfang 创建于 2026-02-24，当前约 17,617 stars、2,252 forks。技术标签：agent-framework、ai-agents、llm、mcp、open-source、openclaw。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/RightNow-AI/openfang",
+      "created_at": "2026-02-24"
+    },
+    {
+      "rank": 32,
+      "name": "pua",
+      "repo": "tanweai/pua",
+      "stars": 17600,
+      "tech": [
+        "TypeScript",
+        "agency",
+        "agent",
+        "pip"
+      ],
+      "summary": "你是一个曾经被寄予厚望的 P8 级工程师。Anthropic 当初给你定级的时候，对你的期望是很高的。 一个agent使用的高能动性的skill。 Your AI has been placed on a PIP. 30 days to show improvement.",
+      "detail": "tanweai/pua 创建于 2026-03-08，当前约 17,600 stars、1,031 forks。技术标签：agency、agent、pip、pua。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/tanweai/pua",
+      "created_at": "2026-03-08"
+    },
+    {
+      "rank": 33,
+      "name": "code-review-graph",
+      "repo": "tirth8205/code-review-graph",
+      "stars": 17167,
+      "tech": [
+        "Python",
+        "ai-coding",
+        "claude",
+        "claude-code"
+      ],
+      "summary": "把代码、文档和多模态资料转成可查询知识图谱，方便理解大型项目。",
+      "detail": "tirth8205/code-review-graph 创建于 2026-02-26，当前约 17,167 stars、1,846 forks。技术标签：ai-coding、claude、claude-code、code-review、graphrag、incremental。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "created_at": "2026-02-26"
+    },
+    {
+      "rank": 34,
+      "name": "QwenPaw",
+      "repo": "agentscope-ai/QwenPaw",
+      "stars": 16885,
+      "tech": [
+        "Python",
+        "agent",
+        "agentscope",
+        "agentscope-runtime"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Your、Personal、Assistant 展开，具体功能以 README 为准。",
+      "detail": "agentscope-ai/QwenPaw 创建于 2026-02-24，当前约 16,885 stars、2,464 forks。技术标签：agent、agentscope、agentscope-runtime、llm-tools、llms、skills。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/agentscope-ai/QwenPaw",
+      "created_at": "2026-02-24"
+    },
+    {
+      "rank": 35,
+      "name": "agentmemory",
+      "repo": "rohitg00/agentmemory",
+      "stars": 16247,
+      "tech": [
+        "TypeScript",
+        "agentmemory",
+        "agents",
+        "ai"
+      ],
+      "summary": "面向 AI 长期记忆的开源系统，关注记忆存储、检索和上下文注入。",
+      "detail": "rohitg00/agentmemory 创建于 2026-02-25，当前约 16,247 stars、1,336 forks。技术标签：agentmemory、agents、ai、claude、claudecode、codex。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "created_at": "2026-02-25"
+    },
+    {
+      "rank": 36,
+      "name": "edict",
+      "repo": "cft0808/edict",
+      "stars": 15835,
+      "tech": [
+        "Python",
+        "ai-agents",
+        "ai-orchestration",
+        "autonomous-agents"
+      ],
+      "summary": "🏛️ 三省六部制 · OpenClaw Multi-Agent Orchestration System — 9 specialized AI agents with real-time dashboard, model config, and full audit trails",
+      "detail": "cft0808/edict 创建于 2026-02-23，当前约 15,835 stars、1,668 forks。技术标签：ai-agents、ai-orchestration、autonomous-agents、claude、dashboard、kanban。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/cft0808/edict",
+      "created_at": "2026-02-23"
+    },
+    {
+      "rank": 37,
+      "name": "context-mode",
+      "repo": "mksglu/context-mode",
+      "stars": 15403,
+      "tech": [
+        "TypeScript",
+        "antigravity",
+        "claude",
+        "claude-code"
+      ],
+      "summary": "面向编码代理的工程工具，帮助团队管理自动化实现过程。",
+      "detail": "mksglu/context-mode 创建于 2026-02-23，当前约 15,403 stars、1,103 forks。技术标签：antigravity、claude、claude-code、claude-code-hooks、claude-code-plugins、claude-code-skill。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/mksglu/context-mode",
+      "created_at": "2026-02-23"
+    },
+    {
+      "rank": 38,
+      "name": "ai-website-cloner-template",
+      "repo": "JCodesMore/ai-website-cloner-template",
+      "stars": 15297,
+      "tech": [
+        "TypeScript",
+        "ai",
+        "ai-agents",
+        "ai-tools"
+      ],
+      "summary": "面向编码代理的工程工具，帮助团队管理自动化实现过程。",
+      "detail": "JCodesMore/ai-website-cloner-template 创建于 2026-03-13，当前约 15,297 stars、2,340 forks。技术标签：ai、ai-agents、ai-tools、automation、boilerplate、claude。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "created_at": "2026-03-13"
+    },
+    {
+      "rank": 39,
+      "name": "awesome-gpt-image-2-API-and-Prompts",
+      "repo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "stars": 15290,
+      "tech": [
+        "Python",
+        "ai-art",
+        "api",
+        "awesome-list"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 GPT、Image、API 展开，具体功能以 README 为准。",
+      "detail": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts 创建于 2026-04-18，当前约 15,290 stars、1,547 forks。技术标签：ai-art、api、awesome-list、awesome-lists、chatgpt、creative-tools。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "created_at": "2026-04-18"
+    },
+    {
+      "rank": 40,
+      "name": "huashu-design",
+      "repo": "alchaincyf/huashu-design",
+      "stars": 14644,
+      "tech": [
+        "HTML"
+      ],
+      "summary": "Huashu Design · HTML-native design skill for Claude Code · Claude Code 里 HTML 原生的设计 skill · 高保真原型 / 幻灯片 / 动画 + 20 设计哲学 + 5 维评审 + MP4 导出 · Agent-agnostic",
+      "detail": "alchaincyf/huashu-design 创建于 2026-04-19，当前约 14,644 stars、1,981 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/alchaincyf/huashu-design",
+      "created_at": "2026-04-19"
+    },
+    {
+      "rank": 41,
+      "name": "Recordly",
+      "repo": "webadderallorg/Recordly",
+      "stars": 14581,
+      "tech": [
+        "TypeScript",
+        "electron",
+        "free",
+        "linux"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Create、polished、screen 展开，具体功能以 README 为准。",
+      "detail": "webadderallorg/Recordly 创建于 2026-03-12，当前约 14,581 stars、1,037 forks。技术标签：electron、free、linux、macos、open-source、screen-recorder。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/webadderallorg/Recordly",
+      "created_at": "2026-03-12"
+    },
+    {
+      "rank": 42,
+      "name": "design.md",
+      "repo": "google-labs-code/design.md",
+      "stars": 14567,
+      "tech": [
+        "TypeScript"
+      ],
+      "summary": "收集不同品牌风格的 DESIGN.md 文件，帮助编码代理生成更贴近设计系统的界面。",
+      "detail": "google-labs-code/design.md 创建于 2026-04-10，当前约 14,567 stars、1,377 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/google-labs-code/design.md",
+      "created_at": "2026-04-10"
+    },
+    {
+      "rank": 43,
+      "name": "RustTraining",
+      "repo": "microsoft/RustTraining",
+      "stars": 14365,
+      "tech": [
+        "Rust"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Beginner、advanced、expert 展开，具体功能以 README 为准。",
+      "detail": "microsoft/RustTraining 创建于 2026-03-13，当前约 14,365 stars、1,116 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/microsoft/RustTraining",
+      "created_at": "2026-03-13"
+    },
+    {
+      "rank": 44,
+      "name": "CorridorKey",
+      "repo": "nikopueringer/CorridorKey",
+      "stars": 13570,
+      "tech": [
+        "Python"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Perfect、Green、Screen 展开，具体功能以 README 为准。",
+      "detail": "nikopueringer/CorridorKey 创建于 2026-02-25，当前约 13,570 stars、830 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/nikopueringer/CorridorKey",
+      "created_at": "2026-02-25"
+    },
+    {
+      "rank": 45,
+      "name": "obscura",
+      "repo": "h4ckf0r0day/obscura",
+      "stars": 13563,
+      "tech": [
+        "Rust"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 headless、browser、agents 展开，具体功能以 README 为准。",
+      "detail": "h4ckf0r0day/obscura 创建于 2026-04-13，当前约 13,563 stars、878 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/h4ckf0r0day/obscura",
+      "created_at": "2026-04-13"
+    },
+    {
+      "rank": 46,
+      "name": "browser-harness",
+      "repo": "browser-use/browser-harness",
+      "stars": 13486,
+      "tech": [
+        "Python",
+        "ai-agent",
+        "browser-agent",
+        "browser-automation"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Browser、Harness、Self 展开，具体功能以 README 为准。",
+      "detail": "browser-use/browser-harness 创建于 2026-04-17，当前约 13,486 stars、1,243 forks。技术标签：ai-agent、browser-agent、browser-automation、browser-use、browser-use-box、browser-use-cloud。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/browser-use/browser-harness",
+      "created_at": "2026-04-17"
+    },
+    {
+      "rank": 47,
+      "name": "OpenMythos",
+      "repo": "kyegomez/OpenMythos",
+      "stars": 13288,
+      "tech": [
+        "Python",
+        "ai",
+        "anthropic",
+        "attention"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 theoretical、reconstruction、Claude 展开，具体功能以 README 为准。",
+      "detail": "kyegomez/OpenMythos 创建于 2026-04-18，当前约 13,288 stars、3,027 forks。技术标签：ai、anthropic、attention、claude、claude-ai、claude-code。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/kyegomez/OpenMythos",
+      "created_at": "2026-04-18"
+    },
+    {
+      "rank": 48,
+      "name": "OpenHarness",
+      "repo": "HKUDS/OpenHarness",
+      "stars": 12942,
+      "tech": [
+        "Python"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 OpenHarness、Open、Agent 展开，具体功能以 README 为准。",
+      "detail": "HKUDS/OpenHarness 创建于 2026-04-01，当前约 12,942 stars、2,141 forks。技术标签：暂无 topic。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/HKUDS/OpenHarness",
+      "created_at": "2026-04-01"
+    },
+    {
+      "rank": 49,
+      "name": "agency-agents-zh",
+      "repo": "jnMetaCode/agency-agents-zh",
+      "stars": 12570,
+      "tech": [
+        "Shell",
+        "agency-orchestrator",
+        "agent-definitions",
+        "ai-agents"
+      ],
+      "summary": "🎭 211 个即插即用的 AI 专家角色 — 支持 Hermes Agent/Claude Code/Cursor/Copilot 等 16 种工具，覆盖工程/设计/营销/金融等 18 个部门。含 46 个中国市场原创智能体（小红书/抖音/微信/飞书/钉钉等）",
+      "detail": "jnMetaCode/agency-agents-zh 创建于 2026-03-06，当前约 12,570 stars、2,260 forks。技术标签：agency-orchestrator、agent-definitions、ai-agents、ai-roles、chinese、claude。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/jnMetaCode/agency-agents-zh",
+      "created_at": "2026-03-06"
+    },
+    {
+      "rank": 50,
+      "name": "AutoResearchClaw",
+      "repo": "aiming-lab/AutoResearchClaw",
+      "stars": 12488,
+      "tech": [
+        "Python",
+        "autonomous-research",
+        "citation-verification",
+        "llm-agents"
+      ],
+      "summary": "根据仓库简介整理：项目围绕 Fully、autonomous、self 展开，具体功能以 README 为准。",
+      "detail": "aiming-lab/AutoResearchClaw 创建于 2026-03-15，当前约 12,488 stars、1,459 forks。技术标签：autonomous-research、citation-verification、llm-agents、metaclaw、multi-agent-debate、openclaw。简介来自仓库 description 的中文整理；点击原站可查看 README、issue 和 release。",
+      "url": "https://github.com/aiming-lab/AutoResearchClaw",
+      "created_at": "2026-03-15"
+    }
+  ]
+}

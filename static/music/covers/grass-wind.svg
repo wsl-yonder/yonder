@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#b9ecff"/>
+    <stop offset="1" stop-color="#f8fff0"/>
+  </linearGradient>
+  <rect width="960" height="960" fill="url(#sky)"/>
+  <path d="M0 620c160-82 276-70 438-2s302 56 522-42v384H0z" fill="#7ccf7a"/>
+  <path d="M120 438c170-84 314 60 474-52 92-64 160-60 238-30" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round" opacity=".8"/>
+  <path d="M92 708c98-50 224-40 332 28s244 54 414-34" fill="none" stroke="#f8fff0" stroke-width="18" stroke-linecap="round" opacity=".8"/>
+  <text x="86" y="132" fill="#14313b" font-family="Arial, sans-serif" font-size="54" font-weight="800">风经过草坪</text>
+</svg>

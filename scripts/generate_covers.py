@@ -1,4 +1,4 @@
-"""Cover generation pipeline for Knowledge Radar project cards.
+"""Cover generation pipeline for Yonder project cards.
 
 Generates JPG covers by compositing real background images with project text
 overlays. When PIXABAY_API_KEY is not configured, the website falls back to
@@ -24,7 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from knowledge_radar.github_demo import GITHUB_PROJECTS  # noqa: E402
+from yonder.github_demo import GITHUB_PROJECTS  # noqa: E402
 
 OUT_DIR = ROOT / "static" / "assets" / "github" / "covers"
 POOL_DIR = ROOT / "static" / "assets" / "github" / "pool"

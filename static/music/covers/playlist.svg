@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9fff7"/>
+      <stop offset="0.52" stop-color="#d8f2ff"/>
+      <stop offset="1" stop-color="#fff3dd"/>
+    </linearGradient>
+    <linearGradient id="disc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#176d81"/>
+      <stop offset="1" stop-color="#4fbd82"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="960" fill="url(#bg)"/>
+  <circle cx="724" cy="158" r="176" fill="#ffffff" opacity=".48"/>
+  <circle cx="198" cy="792" r="238" fill="#4fbd82" opacity=".12"/>
+  <circle cx="480" cy="500" r="286" fill="url(#disc)" opacity=".9"/>
+  <circle cx="480" cy="500" r="214" fill="#f9fffc" opacity=".22"/>
+  <circle cx="480" cy="500" r="82" fill="#f8ffff"/>
+  <path d="M296 702c134 62 277 44 386-51" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" opacity=".55"/>
+  <path d="M304 326c112-86 279-91 401-5" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity=".44"/>
+  <text x="96" y="132" fill="#14313b" font-family="Arial, sans-serif" font-size="58" font-weight="800">今日宜闻</text>
+  <text x="100" y="188" fill="#176d81" font-family="Arial, sans-serif" font-size="32" font-weight="700">夜间电台</text>
+</svg>

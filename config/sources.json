@@ -1,66 +1,26 @@
 [
   {
-    "name": "OpenAI Blog",
-    "url": "https://openai.com/news/rss.xml",
+    "name": "量子位",
+    "url": "https://www.qbitai.com/feed",
     "type": "rss",
     "channel": "ai",
-    "credibility_score": 0.95,
+    "credibility_score": 0.86,
     "enabled": true
   },
   {
-    "name": "Google DeepMind Blog",
-    "url": "https://deepmind.google/blog/rss.xml",
-    "type": "rss",
+    "name": "36氪 AI",
+    "url": "https://www.36kr.com/information/AI/",
+    "type": "html_list",
     "channel": "ai",
-    "credibility_score": 0.95,
-    "enabled": true
-  },
-  {
-    "name": "Google AI Blog",
-    "url": "https://blog.google/technology/ai/rss/",
-    "type": "rss",
-    "channel": "ai",
-    "credibility_score": 0.9,
-    "enabled": true
-  },
-  {
-    "name": "Hugging Face Blog",
-    "url": "https://huggingface.co/blog/feed.xml",
-    "type": "rss",
-    "channel": "ai",
-    "credibility_score": 0.9,
-    "enabled": false
-  },
-  {
-    "name": "NVIDIA Blog",
-    "url": "https://blogs.nvidia.com/feed/",
-    "type": "rss",
-    "channel": "ai",
-    "credibility_score": 0.85,
-    "enabled": true
-  },
-  {
-    "name": "SEC Press Releases",
-    "url": "https://www.sec.gov/news/pressreleases.rss",
-    "type": "rss",
-    "channel": "finance",
-    "credibility_score": 0.9,
-    "enabled": true
-  },
-  {
-    "name": "Federal Reserve Press Releases",
-    "url": "https://www.federalreserve.gov/feeds/press_all.xml",
-    "type": "rss",
-    "channel": "finance",
-    "credibility_score": 0.95,
-    "enabled": true
-  },
-  {
-    "name": "WSJ Markets",
-    "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
-    "type": "rss",
-    "channel": "finance",
     "credibility_score": 0.8,
+    "enabled": true
+  },
+  {
+    "name": "新浪财经滚动",
+    "url": "https://finance.sina.cn/roll/",
+    "type": "html_list",
+    "channel": "finance",
+    "credibility_score": 0.82,
     "enabled": true
   },
   {
@@ -69,7 +29,7 @@
     "type": "rss",
     "channel": "tech",
     "credibility_score": 0.75,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "GitHub Blog",
@@ -77,14 +37,6 @@
     "type": "rss",
     "channel": "tech",
     "credibility_score": 0.85,
-    "enabled": true
-  },
-  {
-    "name": "The Verge",
-    "url": "https://www.theverge.com/rss/index.xml",
-    "type": "rss",
-    "channel": "tech",
-    "credibility_score": 0.8,
-    "enabled": true
+    "enabled": false
   }
 ]

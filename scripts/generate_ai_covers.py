@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from knowledge_radar.ai_news import AI_ARTICLES
+from yonder.ai_news import AI_ARTICLES
 from generate_covers import composite_cover, load_pixabay_key
 
 OUT_DIR = ROOT / "static" / "assets" / "ai" / "covers"

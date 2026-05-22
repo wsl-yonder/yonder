@@ -1,0 +1,72 @@
+name: Yonder daily static export
+
+"on":
+  workflow_dispatch:
+  schedule:
+    # 08:30 Asia/Shanghai = 00:30 UTC
+    - cron: "30 0 * * *"
+
+concurrency:
+  group: daily-static-export
+  cancel-in-progress: false
+
+env:
+  CLOUDFLARE_PROJECT_NAME: yonder
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  export:
+    name: Refresh data, export dist, and deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile Python sources
+        run: PYTHONPATH=src python -m compileall src/yonder
+
+      - name: Refresh daily data
+        run: PYTHONPATH=src python -m yonder.cli daily-update
+
+      - name: Export static site
+        run: PYTHONPATH=src python -m yonder.cli export-static
+
+      - name: Verify static export
+        run: |
+          test -f dist/index.html
+          test -f dist/github/index.html
+          test -f dist/ai/index.html
+          test -f dist/finance/index.html
+          test -f dist/static/assets/github/covers/cover-50.jpg
+
+      - name: Upload static site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: yonder-dist
+          path: dist
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print deployment URL
+        run: |
+          echo "Deployment URL: ${{ steps.deploy.outputs.deployment-url }}"
+          echo "Alias URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}"

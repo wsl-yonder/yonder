@@ -12,6 +12,7 @@ concurrency:
 
 env:
   CLOUDFLARE_PROJECT_NAME: yonder
+  CLOUDFLARE_ACCOUNT_ID: 07c9f0c50d8860ad1f52cc7a12c838a0
 
 permissions:
   contents: read
@@ -62,7 +63,7 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
           command: pages project create ${{ env.CLOUDFLARE_PROJECT_NAME }} --production-branch=main
 
       - name: Deploy to Cloudflare Pages
@@ -70,7 +71,7 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }} --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 

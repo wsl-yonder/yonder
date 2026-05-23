@@ -71,3 +71,4 @@
 - Checkpoint: 第三阶段 Cloudflare Pages 部署配置完成。新增 `wrangler.toml` 与 `docs/deployment.md`，GitHub Actions 在导出 `dist/` 并上传 `yonder-dist` artifact 后，会通过 `cloudflare/wrangler-action@v3` 执行 `pages deploy dist --project-name=yonder`。
 - Next: 需要在 GitHub 仓库 Actions Secrets 中填入 `CLOUDFLARE_API_TOKEN` 与 `CLOUDFLARE_ACCOUNT_ID`，然后手动运行一次 workflow 验证线上地址。
 - Fix: 首次运行 Actions 时 Cloudflare 返回 `Project not found`，已在 workflow 中加入 Wrangler `pages project create yonder --production-branch=main` 步骤；若项目已存在则忽略创建失败并继续部署。
+- Fix: 最新 Actions 日志显示 `CLOUDFLARE_ACCOUNT_ID` Secret 被误填成 Cloudflare API 验证 URL，Wrangler 路由到错误 account 路径。已把正确 Account ID `07c9f0c50d8860ad1f52cc7a12c838a0` 直接写入 workflow env，避免再次读错 Secret。

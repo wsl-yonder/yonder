@@ -25,14 +25,13 @@ Yonder 的公网部署走 Cloudflare Pages Direct Upload：
 Settings -> Secrets and variables -> Actions -> New repository secret
 ```
 
-添加两个 secret：
+添加 Cloudflare API Token：
 
 ```text
 CLOUDFLARE_API_TOKEN
-CLOUDFLARE_ACCOUNT_ID
 ```
 
-`CLOUDFLARE_API_TOKEN` 建议使用 Cloudflare API Token，权限至少包含 Cloudflare Pages 的编辑/部署权限。`CLOUDFLARE_ACCOUNT_ID` 在 Cloudflare Dashboard 右侧账号信息或 Workers & Pages 页面可以找到。
+`CLOUDFLARE_API_TOKEN` 建议使用 Cloudflare API Token，权限至少包含 Cloudflare Pages 的编辑/部署权限。`CLOUDFLARE_ACCOUNT_ID` 不是密钥，当前已在 workflow 中固定为 `07c9f0c50d8860ad1f52cc7a12c838a0`，对应用户当前 Cloudflare 账号。
 
 ## 手动部署
 

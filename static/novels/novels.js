@@ -265,10 +265,15 @@
   }[char]));
   const formatWords = (value) => `${(value / 10000).toFixed(value >= 1000000 ? 0 : 1)}万字`;
   const progressKey = (id) => `novelProgress:${id}`;
-  const setView = (name) => {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  const setView = (name, options = {}) => {
     Object.entries(views).forEach(([key, el]) => {
       el.hidden = key !== name;
     });
+    if (!options.scroll) return;
     const top = document.querySelector("#novel-app").getBoundingClientRect().top + window.scrollY - 18;
     window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   };
@@ -308,7 +313,7 @@
 
   async function loadGutenbergDetail(novel) {
     views.detail.innerHTML = `<div class="empty-state">正在从 ${escapeHtml(novel.sourceName || "书源")} 读取《${escapeHtml(novel.title)}》正文...</div>`;
-    setView("detail");
+    setView("detail", { scroll: true });
     const response = await fetch(`/api/novels/gutenberg/${novel.externalId}`);
     if (!response.ok) throw new Error("正文加载失败");
     const detail = await response.json();
@@ -365,7 +370,7 @@
         novel = await loadGutenbergDetail(novel);
       } catch (error) {
         views.detail.innerHTML = `<div class="empty-state">书源正文读取失败：${escapeHtml(error.message)}</div>`;
-        setView("detail");
+        setView("detail", { scroll: true });
         return;
       }
     }
@@ -400,7 +405,7 @@
             <small>${index === progress ? "上次读到" : "阅读"}</small>
           </button>`).join("")}
       </section>`;
-    setView("detail");
+    setView("detail", { scroll: true });
   }
 
   function applyReaderTheme() {
@@ -441,18 +446,20 @@
     views.reader.dataset.novelId = novel.id;
     views.reader.dataset.chapterIndex = String(index);
     applyReaderTheme();
-    setView("reader");
+    setView("reader", { scroll: true });
   }
 
   async function routeFromHash() {
     const [, type, id, chapter] = window.location.hash.match(/^#(novel|read)\/([^/]+)\/?(\d+)?$/) || [];
     if (!type) {
       setView("library");
+      if (!window.location.hash) window.scrollTo({ top: 0, behavior: "auto" });
       return;
     }
     const novel = getNovel(id);
     if (!novel) {
       setView("library");
+      window.scrollTo({ top: 0, behavior: "auto" });
       return;
     }
     if (type === "read") {
@@ -515,6 +522,14 @@
     });
   });
   document.addEventListener("click", (event) => {
+    const novelsNav = event.target.closest('a[href="/novels"]');
+    if (novelsNav) {
+      event.preventDefault();
+      history.pushState({}, "", "/novels");
+      setView("library");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     const detail = event.target.closest("[data-open-detail]");
     if (detail) {
       event.preventDefault();

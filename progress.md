@@ -74,3 +74,4 @@
 - Fix: 最新 Actions 日志显示 `CLOUDFLARE_ACCOUNT_ID` Secret 被误填成 Cloudflare API 验证 URL，Wrangler 路由到错误 account 路径。已把正确 Account ID `07c9f0c50d8860ad1f52cc7a12c838a0` 直接写入 workflow env，避免再次读错 Secret。
 - Fix: 金融页顶部横幅不再复用 GitHub/赛博横幅，新增 `static/assets/finance/banner.svg`，金融页改为浅色行情城市视觉。
 - Fix: 音乐页与小说页顶部横幅不再复用首页草坪背景，分别新增 `static/assets/music/banner.svg` 与 `static/assets/novels/banner.svg`。
+- Fix: 小说页从顶部导航进入时不再自动滚到“当前书源”区域；书库态保持页面顶部，只有详情/阅读态滚到内容区。小说横幅重绘为更柔和的二次元窗边草地读书场景。

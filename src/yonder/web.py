@@ -3464,7 +3464,7 @@ def render_novels_page() -> str:
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/novels/novels.css?v=3">
+  <link rel="stylesheet" href="/static/novels/novels.css?v=4">
 </head>
 <body>
   <header class="novel-hero">
@@ -3526,7 +3526,7 @@ def render_novels_page() -> str:
   </main>
   <footer id="site-footer" class="poem">灯下翻书，风也慢下来。</footer>
 
-  <script src="/static/novels/novels.js?v=2"></script>
+  <script src="/static/novels/novels.js?v=3"></script>
 </body>
 </html>"""
     return page.replace("__NAV__", _reader_nav("/novels"))

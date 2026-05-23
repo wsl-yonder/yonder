@@ -30,8 +30,8 @@ button, input, select { font: inherit; }
   min-height: 230px;
   color: #fff;
   background:
-    linear-gradient(120deg, rgba(37, 28, 22, .76), rgba(141, 75, 47, .38)),
-    url("/static/assets/scene/pastoral-4k.png") center 56% / cover no-repeat;
+    linear-gradient(120deg, rgba(51, 34, 23, .68), rgba(141, 75, 47, .24)),
+    url("/static/assets/novels/banner.svg") center 52% / cover no-repeat;
 }
 
 .topbar {

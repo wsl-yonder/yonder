@@ -73,3 +73,4 @@
 - Fix: 首次运行 Actions 时 Cloudflare 返回 `Project not found`，已在 workflow 中加入 Wrangler `pages project create yonder --production-branch=main` 步骤；若项目已存在则忽略创建失败并继续部署。
 - Fix: 最新 Actions 日志显示 `CLOUDFLARE_ACCOUNT_ID` Secret 被误填成 Cloudflare API 验证 URL，Wrangler 路由到错误 account 路径。已把正确 Account ID `07c9f0c50d8860ad1f52cc7a12c838a0` 直接写入 workflow env，避免再次读错 Secret。
 - Fix: 金融页顶部横幅不再复用 GitHub/赛博横幅，新增 `static/assets/finance/banner.svg`，金融页改为浅色行情城市视觉。
+- Fix: 音乐页与小说页顶部横幅不再复用首页草坪背景，分别新增 `static/assets/music/banner.svg` 与 `static/assets/novels/banner.svg`。

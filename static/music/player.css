@@ -28,8 +28,8 @@ a { color: inherit; }
   overflow: hidden;
   color: #fff;
   background:
-    linear-gradient(120deg, rgba(24, 38, 48, .72), rgba(255, 61, 95, .24)),
-    url("/static/assets/scene/pastoral-4k.png") center 58% / cover no-repeat;
+    linear-gradient(120deg, rgba(40, 35, 46, .58), rgba(255, 61, 95, .18)),
+    url("/static/assets/music/banner.svg") center 48% / cover no-repeat;
   border-bottom: 1px solid rgba(255, 255, 255, .72);
 }
 

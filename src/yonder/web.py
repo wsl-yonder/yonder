@@ -3280,7 +3280,7 @@ def render_finance_page(settings) -> str:
         section_title="A股 · 美股快讯",
         section_copy=_reader_section_copy(items, "finance"),
         status=f"自动更新 · Top {len(items)}",
-        banner="/static/assets/scene/cyber-banner.jpg",
+        banner="/static/assets/finance/banner.svg",
         poem="看盘有风浪，落子须清醒。",
         items=items,
     )
